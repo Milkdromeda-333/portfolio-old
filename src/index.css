@@ -28,6 +28,8 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+  position: relative;
 }
 
 .navbar > a {
@@ -62,20 +64,56 @@ nav {
   background-color: var(--blue);
   position: absolute;
   left: 0;
-  bottom: 0px;
+  bottom: 3px;
   width: 100%;
   height: 8px;
   z-index: -1;
-  transition: all 0.3s ease-in-out;
+  transition: all 100ms ease-in-out;
 }
 
 .nav-links a:hover::before {
-  /* bottom: 0; */
+  bottom: 0;
   height: 100%;
+}
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  /* im using a downloaded stylesheet for the hamburger menu and I don't know how tp change the color so this will do */
+  background-color: var(--sand) !important;
+  display: none;
 }
 
 .hero {
   background-image: url(./assets/gggrain.svg);
   background-position: center;
   height: 70vh;
+}
+
+/* small screens */
+@media (max-width: 570px) {
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    border-top: 4px solid var(--red);
+    background-color: var(--green);
+    padding-top: 1rem;
+    transition: all 100ms ease-in;
+
+    position: absolute;
+    top: 100%;
+    right: 100%;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .nav-links.is-active {
+    right: 0;
+  }
 }
