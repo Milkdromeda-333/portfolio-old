@@ -4,6 +4,8 @@
   --orange: #9b461f;
   --sand: #dea450;
   --green: #354c3c;
+  --red: #6a1d2f;
+  --blue: #42354c;
 }
 
 body {
@@ -47,8 +49,29 @@ nav {
 }
 
 .nav-links a {
-  color: inherit;
+  color: var(--sand);
   text-decoration: none;
+  padding-inline: 10px;
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
+}
+
+.nav-links a::before {
+  content: "";
+  background-color: var(--blue);
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 100%;
+  height: 8px;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-links a:hover::before {
+  /* bottom: 0; */
+  height: 100%;
 }
 
 .hero {
