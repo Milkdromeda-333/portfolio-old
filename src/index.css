@@ -1,0 +1,58 @@
+:root {
+  --regular-font: "Lora", serif;
+  --decor-font: "Rowdies", cursive;
+  --orange: #9b461f;
+  --sand: #dea450;
+  --green: #354c3c;
+}
+
+body {
+  margin: 0;
+  font-family: var(--regular-font);
+  background-color: var(--orange);
+}
+
+/* HOME PAGE */
+
+nav {
+  height: 5rem;
+  padding: 10px;
+  background-color: var(--green);
+  color: var(--sand);
+  padding-inline: 1rem;
+  font-size: 1.5rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar > a {
+  height: 100%;
+}
+
+.logo {
+  height: 100%;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.nav-links a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.hero {
+  background-image: url(./assets/gggrain.svg);
+  background-position: center;
+  height: 70vh;
+}
