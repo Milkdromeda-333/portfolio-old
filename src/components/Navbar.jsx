@@ -11,6 +11,7 @@ export default function Navbar() {
 
     return (
         <nav className="navbar">
+            
             <Link to="/" >
                 <img src={Logo} alt="logo" className="logo" />
             </Link>
