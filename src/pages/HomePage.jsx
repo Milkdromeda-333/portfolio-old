@@ -26,7 +26,14 @@ export default function HomePage() {
                     <span className="pronounciation">(Anne-Juh-Neek Mack-ee)</span>
                 </h2>
 
-                <p>I'm a Full-stack Web Developer who has a special interest in JavaScript and web design. My motto is that I build beautiful user experiences and write smart code. Learning is my biggest hobby, and web development has been the perfect endeavor. Check out my previous projects {<Link to="/portfolio">here</Link>}.</p>
+                <p>I'm a MERN Full-stack Web Developer who has a soft spot for JavaScript and web design. My motto is that I build beautiful user experiences and write smart code. Learning is my greatest hobby, and web development has been the perfect endeavor. Check out my previous projects {<Link to="/portfolio">here</Link>}.</p>
+
+                <div className="sec1-pt2">
+    
+                    <h3>My mission is:</h3>
+                    <p>To use my knowledge, problem solving and creative thinking abilities to build beautiful and efficient software solutions.</p>
+                </div>
+                
 
             </section>
         </main>

@@ -9,7 +9,7 @@
   --red: #6a1d2f;
   --red-tint: rgb(107, 40, 54);
   --blue: #42354c;
-  --blue-tint: #45384f;
+  --blue-tone: #3d2f47;
 
   --body-padding: 20%;
 }
@@ -18,6 +18,20 @@ body {
   margin: 0;
   font-family: var(--regular-font);
   background-color: var(--orange);
+}
+
+.accent-words {
+  background-color: var(--green);
+}
+
+.underline {
+  text-decoration: underline;
+  text-decoration-color: var(--blue);
+}
+
+h3 {
+  font-size: 2rem;
+  text-shadow: 2px 2px 5px var(--blue);
 }
 
 /* ===== NAVBAR ===== */
@@ -84,6 +98,7 @@ nav {
 .nav-links a:hover::before {
   bottom: 0;
   height: 100%;
+  background-color: var(--red);
 }
 .hamburger-inner,
 .hamburger-inner::before,
@@ -97,6 +112,7 @@ nav {
 
 .hero {
   background-image: url(./assets/nnnoise.svg);
+  background-attachment: fixed;
   background-color: var(--green);
   background-position: center;
   background-size: cover;
@@ -141,15 +157,15 @@ h1 {
   background-color: var(--blue);
   padding: 0.5rem 1.5rem;
   font-size: 1.3rem;
+  text-shadow: 2px 2px 5px black;
   border-radius: 10px;
   margin-top: 1rem;
-  border: 2px solid var(--red);
+  border: 3px solid var(--red);
   transition: all 200ms ease-in;
 }
 
 .hero-btn:hover {
-  background-color: var(--blue-tint);
-  border-color: var(--red-tint);
+  background-color: var(--blue-tone);
 }
 
 .hero div {
@@ -170,23 +186,44 @@ h1 {
 
 .sec1 h2 {
   font-size: 3rem;
+  text-shadow: 2px 2px 5px var(--blue);
+  margin-bottom: 1rem;
 }
 
 .sec1 .pronounciation {
-  font-size: 1.8rem;
-  text-shadow: 2px 2px 5px black;
+  font-size: 1.5rem;
 }
 
 .sec1 p {
   font-size: 1.5rem;
-}
-
-.sec1 a:hover {
-  color: var(--sand-tint);
+  margin-top: 1rem;
 }
 
 .sec1 a {
+  background-color: transparent;
+  position: relative;
+  text-decoration: none;
   color: var(--sand);
+  z-index: 1;
+  padding: 3px;
+}
+
+.sec1 a::before {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  bottom: 3px;
+  left: 0;
+  height: 10px;
+  width: 100%;
+  background-color: var(--blue);
+  transition: all 100ms ease-in-out;
+}
+
+.sec1 a:hover::before {
+  height: 90%;
+  bottom: 0;
+  background-color: var(--green);
 }
 
 /* ===== MEDA QUERIES ===== */
@@ -223,6 +260,9 @@ h1 {
   }
 }
 
+.me-img {
+  height: 300px;
+}
 @media (max-width: 570px) {
   .hamburger-inner,
   .hamburger-inner::before,
