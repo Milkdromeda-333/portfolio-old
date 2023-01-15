@@ -1,22 +1,20 @@
 import { Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout';
-import HomePage from './pages/HomePage';
-import PortfolioPage from './pages/PortfolioPage';
-import ContactPage from './pages/ContactPage';
+import HomePage from "./pages/HomePage"
+import PortfolioPage from "./pages/PortfolioPage"
 
 function App() {
 
   return (
     <div className="App">
-      <Layout />
+      
+      <HomePage />
+      <PortfolioPage />
 
       <Routes>
-        <Route index path="/" element={<HomePage />} />
-        <Route path="/portfolio" element={<PortfolioPage />} />
-        {/* useParams} */}
-        <Route path="/portfolio:id" element={<PortfolioPage />} />
-        <Route path="/contact" element={<ContactPage /> } />
+        <Route path='/portfolio' />
+        <Route path='/portfolio/:id' />
       </Routes>
+      
     </div>
   );
 }

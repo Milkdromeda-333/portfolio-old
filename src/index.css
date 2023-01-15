@@ -1,17 +1,15 @@
 :root {
   --regular-font: "Lora", serif;
   --decor-font: "Akaya Telivigala", cursive;
-  --orange: rgb(155, 70, 31);
+  --orange: #9b461f;
   --sand: #f3b646;
-  --sand-tone: rgba(234, 170, 52, 0.624);
+  --sand-tone: #eaaa349f;
   --sand-tint: #fcc869;
   --green: #354c3c;
   --red: #6a1d2f;
   --red-tint: rgb(107, 40, 54);
   --blue: #42354c;
   --blue-tone: #3d2f47;
-
-  --body-padding: 20%;
 }
 
 body {
@@ -29,9 +27,10 @@ body {
   text-decoration-color: var(--blue);
 }
 
+h2,
 h3 {
-  font-size: 2rem;
-  text-shadow: 2px 2px 5px var(--blue);
+  text-shadow: 1px 1px 8px black;
+  color: var(--sand);
 }
 
 /* ===== NAVBAR ===== */
@@ -100,6 +99,7 @@ nav {
   height: 100%;
   background-color: var(--red);
 }
+
 .hamburger-inner,
 .hamburger-inner::before,
 .hamburger-inner::after {
@@ -109,6 +109,10 @@ nav {
 }
 
 /* ===== HOMEPAGE ===== */
+
+.home-page {
+  background-image: url(./assets/nnnoise2.svg);
+}
 
 .hero {
   background-image: url(./assets/nnnoise.svg);
@@ -139,12 +143,12 @@ nav {
 
 h1 {
   color: var(--sand);
+  text-shadow: 2px 5px 5px black;
   font-size: 5rem;
   margin: 1rem;
-  text-shadow: 2px 5px 5px black;
 }
 
-.home-page .hero span {
+.hero span {
   color: var(--sand);
   font-size: 1.8rem;
   text-shadow: 2px 5px 5px black;
@@ -178,16 +182,36 @@ h1 {
 /* ===== SECTION 1 ===== */
 
 .sec1 {
-  color: var(--sand);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  margin: 0 auto;
-  padding-inline: var(--body-padding);
+  max-width: 80%;
+  color: var(--sand);
+}
+
+.sec1,
+h3 {
+  font-size: 2rem;
 }
 
 .sec1 h2 {
   font-size: 3rem;
-  text-shadow: 2px 2px 5px var(--blue);
   margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.sec1 h2::before {
+  position: absolute;
+  content: "";
+  background-image: url(./assets/dddynamite.svg);
+  height: 200px;
+  width: 200px;
+  top: -70px;
+  left: -80px;
+  z-index: -1;
 }
 
 .sec1 .pronounciation {
@@ -226,7 +250,159 @@ h1 {
   background-color: var(--green);
 }
 
+/* ===== SKILLS ===== */
+.skills-icons {
+  font-size: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  color: var(--blue);
+  padding-bottom: 5rem;
+}
+
+.skills-icons svg:nth-of-type(odd) {
+  color: var(--green);
+}
+
+/* ===== Portfolio Page ===== */
+.portfolio-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  background-image: url(./assets/nnnoise2.svg);
+}
+
+.portfolio-page h2 {
+  font-size: 3rem;
+  margin-bottom: 5rem;
+  color: var(--sand);
+  position: relative;
+  z-index: 1;
+}
+
+.portfolio-page h2::before {
+  position: absolute;
+  content: "";
+  background-image: url(./assets/dddynamite.svg);
+  height: 200px;
+  width: 200px;
+  top: -70px;
+  left: -80px;
+  z-index: -1;
+}
+
+/* ===== Project Card ===== */
+.project-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+.project-card {
+  width: 80%;
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px solid var(--red);
+  border: 4px solid var(--red);
+  text-align: center;
+  background-color: var(--green);
+  color: var(--sand);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.card-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.card-info h3 {
+  margin: 1rem;
+}
+
+.card-links {
+  margin: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-links a {
+  border: 1px solid var(--red);
+  color: var(--red);
+  margin: 0.5rem;
+  box-shadow: inset 0px 1px 0px 0px #f5978e;
+  background: linear-gradient(to bottom, var(--sand) 5%, var(--sand-tone) 100%);
+  background-color: var(--sand);
+  border-radius: 6px;
+  border: 1px solid var(--red);
+  display: inline-block;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+}
+
+.card-links a:hover {
+  background: linear-gradient(to bottom, var(--sand-tint) 5%, var(--sand) 100%);
+  background-color: var(--sand);
+}
+
+.project-img-container {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.project-card button {
+  box-shadow: inset 0px 1px 0px 0px #cf866c;
+  background: linear-gradient(to bottom, var(--red) 5%, var(--red-tint) 100%);
+  background-color: #var(--red);
+  border-radius: 3px;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 13px;
+  padding: 6px 24px;
+  text-decoration: none;
+  font-family: var(--regular-font);
+}
+
+.project-card button:hover {
+  background: linear-gradient(to bottom, var(--red-tint) 5%, var(--red) 100%);
+}
+
 /* ===== MEDA QUERIES ===== */
+
+@media (max-width: 1164px) {
+  .project-card {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding-bottom: 1rem;
+  }
+
+  .card-info span {
+    padding: 10px;
+  }
+}
 
 @media (max-width: 880px) {
   /* hero */
@@ -245,6 +421,7 @@ h1 {
   /* sec1 */
   .sec1 {
     padding-inline: 1rem;
+    max-width: none;
   }
 
   .sec1 h2 {
@@ -258,12 +435,13 @@ h1 {
   .sec1 p {
     font-size: 1rem;
   }
+
+  .portfolio-page h2 {
+    font-size: 2rem;
+  }
 }
 
-.me-img {
-  height: 300px;
-}
-@media (max-width: 570px) {
+@media (max-width: 600px) {
   .hamburger-inner,
   .hamburger-inner::before,
   .hamburger-inner::after {
@@ -317,6 +495,23 @@ h1 {
   .sec1 p {
     font-size: 1rem;
   }
+
+  /* ===== PROJECT SEC ===== */
+
+  .project-card button {
+    margin: 10px;
+  }
+
+  .card-info h3 {
+    font-size: 1.5rem;
+  }
+
+  .card-links {
+    display: none;
+  }
+
+  .project-card img {
+  }
 }
 
 @media (max-width: 300px) {
@@ -332,5 +527,9 @@ h1 {
 
   .sec1 p {
     font-size: 16px;
+  }
+  /* ===== PORTFOLIO SEC ===== */
+  .card-info {
+    padding-bottom: 0;
   }
 }
