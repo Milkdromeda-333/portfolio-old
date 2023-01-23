@@ -19,7 +19,7 @@ export default function PortfolioPage() {
 
     return (
         <section className='portfolio-page'>
-            <h2>Notable Projects</h2>
+            <h2 className='sec-header'>Notable Projects</h2>
             <div className="project-cards">{projects}</div>
         </section>
     );

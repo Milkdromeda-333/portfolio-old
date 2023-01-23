@@ -1,12 +1,21 @@
+import { useState } from "react";
 import { RxExternalLink } from "react-icons/rx";
+// import ProjectPage from "../pages/ProjectPage"
+
 export default function ProjectCard(props) {
 
     const { name, repoUrl, liveDemoUrl, img, desciption, technologies } = props;
 
+    const [isOffcanvasActive, setIsOffcanvasActive] = useState(false);
+
+    const toggleOffcanvas = () => {
+        setIsOffcanvasActive(prev => !prev);
+    }
+
     return (
         <div className="project-card">
+
             <div className="project-img-container" style={{backgroundImage: `url(src/assets/project-images/${img})`}}>
-                {/* <img src={`src/assets/project-images/${img}`} alt={name} /> */}
             </div>
 
             <div className="card-info">
@@ -23,7 +32,7 @@ export default function ProjectCard(props) {
                     </a>
                 </div>
 
-                <button>Learn more.</button>
+                {/* <button onClick={toggleOffcanvas}>Learn more.</button> */}
             </div>
         </div>
     );
