@@ -405,6 +405,8 @@ h3 {
   /* background-color: var(--green); */
   margin-top: 70px;
   /* background-image: url(./assets/nnnoise2.svg); */
+
+  padding-bottom: 2rem;
 }
 
 .email-form {
@@ -442,12 +444,46 @@ h3 {
 
 .email-form button {
   width: 150px;
-  padding: 5px 15px;
+  padding: 10px 20px;
   font-family: var(--regular-font);
+  font-size: 1.05rem;
   border-radius: 5px;
   background-color: var(--red);
   color: var(--sand);
-  border: 2px solid var(--green);
+
+  /* box-shadow: inset 0px 1px 0px 0px #cf866c; */
+  background: linear-gradient(to bottom, var(--red) 5%, var(--red-tint) 100%);
+  cursor: pointer;
+  border: 2px solid var(--sand-tone);
+}
+
+.email-form button:hover {
+  /* background-color: var(--red-tint); */
+  background: linear-gradient(to bottom, var(--red-tint) 5%, var(--red) 100%);
+  border-color: var(--sand);
+}
+
+footer {
+  background-color: var(--green);
+  padding: 1rem 0;
+  color: var(--sand);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  text-align: center;
+  background-image: url(./assets/nnnoise.svg);
+  font-size: 1.2rem;
+}
+
+.socials-icons svg {
+  font-size: 2.2rem;
+  color: var(--sand);
+}
+
+.socials-icons svg:hover {
+  color: var(--sand-tint);
 }
 
 /* ===== MEDA QUERIES ===== */

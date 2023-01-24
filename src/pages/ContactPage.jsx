@@ -1,13 +1,4 @@
-import { FaGithub } from 'react-icons/fa';
-import { AiFillTwitterCircle } from "react-icons/ai";
-import { SlSocialLinkedin } from "react-icons/sl";
 
-/*
-
-ideas:
-- maybe do a cool divder?
-
-*/
 export default function ContactPage() {
 
     return (

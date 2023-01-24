@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import HomePage from "./pages/HomePage"
 import PortfolioPage from "./pages/PortfolioPage"
 import ContactPage from "./pages/ContactPage"
+import Footer from "./components/Footer"
 
 function App() {
 
@@ -12,7 +13,7 @@ function App() {
       <PortfolioPage />
       <ContactPage />
       </div>
-      {/* <Footer /> */}
+      <Footer />
 
       <Routes>
         <Route path='/portfolio' />

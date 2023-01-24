@@ -1,4 +1,3 @@
-import { BsCodeSlash } from 'react-icons/bs';
 import data from "../components/project-data.json"
 import ProjectCard from '../components/ProjectCard';
 
