@@ -14,7 +14,7 @@ export default function Hero() {
                  Full Stack JavaScript Developer |<wbr/> Creative Problem Solver |<wbr/> Life Long Learner
                 </span>
 
-                <Link to="#contact" className="hero-btn">Contact me</Link>
+                <a href="#contact-page" className="hero-btn">Contact me</a>
 
             </div>
 

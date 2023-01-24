@@ -2,7 +2,7 @@
 export default function ContactPage() {
 
     return (
-        <section className="contact-page">
+        <section className="contact-page" id="contact-page">
 
             <h2 className='sec-header'>Contact me.</h2>
 

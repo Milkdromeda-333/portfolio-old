@@ -25,9 +25,9 @@ export default function Navbar() {
             </button>  
 
             <div className={`nav-links ${isHamburgerActive ? "is-active" : "" }`} >
-                <Link to="/"  onClick={handleHamburger}>Home</Link>
-                <Link to="/portfolio" onClick={handleHamburger}>Portfolio</Link>
-                <Link to="/contact" onClick={handleHamburger}>Contact me</Link>
+                <a href="#about-me"onClick={handleHamburger}>About me</a> 
+                <a href="#portfolio-page" onClick={handleHamburger}>Portfolio</a>
+                <a href="#contact-page" onClick={handleHamburger}>Contact me</a>
             </div>
         </nav>
     );

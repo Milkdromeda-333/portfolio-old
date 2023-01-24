@@ -4,7 +4,7 @@ export default function Intro() {
 
     return (
         
-            <section className="sec1">
+            <section className="sec1" id="about-me">
 
                 <h2 className="sec-header">Howdy! My name is Anjanique Mackey.<br />
                     <span className="pronounciation">(Anne-Juh-Neek Mack-ee)</span>
