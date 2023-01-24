@@ -18,6 +18,13 @@ body {
   background-color: var(--orange);
 }
 
+.body {
+  background-image: url(./assets/nnnoise3.svg);
+
+  background-position: center;
+  background-size: cover;
+}
+
 .accent-words {
   background-color: var(--green);
 }
@@ -31,6 +38,14 @@ h2,
 h3 {
   text-shadow: 1px 1px 8px black;
   color: var(--sand);
+}
+
+.sec-header {
+  font-size: 3rem;
+}
+
+.sec-header-2 {
+  font-size: 32px;
 }
 
 /* ===== NAVBAR ===== */
@@ -110,10 +125,6 @@ nav {
 
 /* ===== HOMEPAGE ===== */
 
-.home-page {
-  background-image: url(./assets/nnnoise2.svg);
-}
-
 .hero {
   background-image: url(./assets/nnnoise.svg);
   background-attachment: fixed;
@@ -122,7 +133,7 @@ nav {
   background-size: cover;
   min-height: 80vh;
   padding-inline: 3.5rem;
-  padding-bottom: 1rem;
+  /* padding-bottom: 1rem; */
   background-repeat: no-repeat;
   font-family: var(--decor-font);
 
@@ -132,7 +143,7 @@ nav {
   align-items: center;
 
   box-shadow: 0px -48px 21px -10px rgba(155, 70, 31, 1) inset;
-  -webkit-box-shadow: 0px -48px 21px -10px rgba(155, 70, 31, 1) inset;
+  -webkit-box-shadow: 0px -33px 21px -10px rgba(155, 70, 31, 1) inset;
   -moz-box-shadow: 0px -48px 21px -10px rgba(155, 70, 31, 1) inset;
 }
 
@@ -261,13 +272,10 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-position: center;
-  background-size: cover;
-  background-image: url(./assets/nnnoise2.svg);
+  /* background-image: url(./assets/nnnoise2.svg); */
 }
 
 .portfolio-page h2 {
-  font-size: 3rem;
   margin-bottom: 5rem;
   color: var(--sand);
   position: relative;
@@ -384,6 +392,62 @@ h3 {
 
 .project-page.active {
   right: 0;
+}
+
+/* ===== CONTACT PAGE ===== */
+.contact-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--sand);
+  /* background-color: var(--green); */
+  margin-top: 70px;
+  /* background-image: url(./assets/nnnoise2.svg); */
+}
+
+.email-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.email-form input {
+  height: 2rem;
+}
+
+.email-form textarea {
+  display: block;
+  resize: horizontal;
+  max-width: 90vw;
+  height: 150px;
+}
+.email-form textarea,
+.email-form input {
+  border-radius: 15px;
+  width: 50vw;
+  border: 3px solid var(--green);
+  background-color: rgb(238, 238, 238);
+  padding: 5px 10px;
+  font-family: var(--regular-font);
+  font-size: 1.1rem;
+}
+
+.email-form label {
+  font-size: 1.5rem;
+}
+
+.email-form button {
+  width: 150px;
+  padding: 5px 15px;
+  font-family: var(--regular-font);
+  border-radius: 5px;
+  background-color: var(--red);
+  color: var(--sand);
+  border: 2px solid var(--green);
 }
 
 /* ===== MEDA QUERIES ===== */

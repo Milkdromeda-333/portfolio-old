@@ -7,10 +7,11 @@ function App() {
 
   return (
     <div className="App">
-      
+      <div className="body">
       <HomePage />
       <PortfolioPage />
       <ContactPage />
+      </div>
       {/* <Footer /> */}
 
       <Routes>

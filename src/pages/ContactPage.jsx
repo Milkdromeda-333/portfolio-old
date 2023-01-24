@@ -12,22 +12,11 @@ export default function ContactPage() {
 
     return (
         <section className="contact-page">
-            <h2>Contact me.</h2>
-            <div className="social-links">
-                <a href="https://github.com/Milkdromeda-333" target="_blank">
-                    <FaGithub />
-                </a>
 
-                <a href="https://twitter.com/Milkdromeda333" target="_blank">
-                    <AiFillTwitterCircle />
-                </a>
+            <h2 className='sec-header'>Contact me.</h2>
 
-                 <a href="https://www.linkedin.com/in/anjanique-mackey/" target="_blank">
-                    <SlSocialLinkedin />
-                </a>
-            </div>
             <form action="" className='email-form'>
-                <h3>Email.</h3>
+                {/* <h3 className='sec-header-2'>Email.</h3> */}
 
                 <label htmlFor="email">Your email:</label>
                 <input type="text" id='email' required />
@@ -36,8 +25,13 @@ export default function ContactPage() {
                 <input type="text" id='subject-line' required />
 
                 <label htmlFor="email-body">Email body:</label>
-                <textarea rows='50' cols='15' required />
+                <textarea rows='10' required />
+                
+                <button>Submit</button>
+
             </form>
+
+            {/* <img src="" alt="" /> */}
         </section>
     );
 }
