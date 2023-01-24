@@ -86,6 +86,8 @@ nav {
   align-items: center;
   gap: 1rem;
   cursor: pointer;
+  position: relative;
+  z-index: 20;
 }
 
 .nav-links a {
@@ -276,7 +278,7 @@ h3 {
 }
 
 .portfolio-page h2 {
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
   color: var(--sand);
   position: relative;
   z-index: 1;
@@ -402,10 +404,7 @@ h3 {
   align-items: center;
 
   color: var(--sand);
-  /* background-color: var(--green); */
-  margin-top: 70px;
-  /* background-image: url(./assets/nnnoise2.svg); */
-
+  margin-top: 20px;
   padding-bottom: 2rem;
 }
 
@@ -427,6 +426,7 @@ h3 {
   max-width: 90vw;
   height: 150px;
 }
+
 .email-form textarea,
 .email-form input {
   border-radius: 15px;
@@ -616,6 +616,13 @@ footer {
 
   .project-card img {
   }
+
+  /* ===== CONTACT SEC ===== */
+  .email-form textarea,
+  .email-form input {
+    width: 80vw;
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 300px) {
@@ -635,5 +642,15 @@ footer {
   /* ===== PORTFOLIO SEC ===== */
   .card-info {
     padding-bottom: 0;
+  }
+
+  /* ===== CONTACT SEC ===== */
+  .contact-page label {
+    font-size: 1rem;
+  }
+
+  /* ===== FOOTER SEC ===== */
+  footer {
+    font-size: 1rem;
   }
 }

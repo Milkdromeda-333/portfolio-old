@@ -7,7 +7,6 @@ export default function ContactPage() {
             <h2 className='sec-header'>Contact me.</h2>
 
             <form action="" className='email-form'>
-                {/* <h3 className='sec-header-2'>Email.</h3> */}
 
                 <label htmlFor="email">Your email:</label>
                 <input type="text" id='email' required />
@@ -21,8 +20,6 @@ export default function ContactPage() {
                 <button>Submit</button>
 
             </form>
-
-            {/* <img src="" alt="" /> */}
         </section>
     );
 }
