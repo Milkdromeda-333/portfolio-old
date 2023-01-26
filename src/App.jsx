@@ -8,11 +8,14 @@ function App() {
 
   return (
     <div className="App">
+      
+      {/* this is containered so to add a background image */}
       <div className="body">
-      <HomePage />
-      <PortfolioPage />
-      <ContactPage />
+        <HomePage />
+        <PortfolioPage />
+        <ContactPage />
       </div>
+      
       <Footer />
 
       <Routes>

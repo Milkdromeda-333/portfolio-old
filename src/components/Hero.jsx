@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Img from "../assets/girl-coding.svg"
 
 export default function Hero() {

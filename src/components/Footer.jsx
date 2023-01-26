@@ -6,18 +6,27 @@ export default function Footer() {
 
     return (
         <footer className="footer">
-            <span>Handcrafted by Anjanique M. 💻 🌏</span>
-            Follow my socials!
+
+            <span>Handcrafted by
+                <span className="keep-together"> Anjanique M. 💻🌏</span>
+            </span>
+
+            <span>Follow my socials!</span>
+
             <div className="socials-icons">
+
                 <a href="https://twitter.com/Milkdromeda333" target="_blank">
                     <FaTwitterSquare />
                 </a>
+
                 <a href="https://www.linkedin.com/in/anjanique-mackey/" target="_blank">
                     <FaLinkedin />
                 </a>
+
                 <a href="https://github.com/Milkdromeda-333" target="_blank">
                     <FaGithubSquare />
                 </a>
+                
             </div>
 
         </footer>
