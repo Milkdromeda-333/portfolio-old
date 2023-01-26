@@ -48,7 +48,7 @@ h3 {
 }
 
 .sec-header-2 {
-  font-size: 32px;
+  font-size: 26px;
   margin: 1rem;
 }
 
@@ -263,9 +263,9 @@ h3 {
   font-size: 1.5rem;
 }
 
-.skills-sec h3 {
+/* .skills-sec h3 {
   margin: 1rem;
-}
+} */
 
 .skill-cards-container {
   display: flex;
@@ -294,10 +294,11 @@ h3 {
 }
 
 .portfolio-page h2 {
-  margin-bottom: 2rem;
+  margin-inline: 1rem;
   color: var(--sand);
   position: relative;
   z-index: 1;
+  text-align: center;
 }
 
 /* ===== Project Card ===== */
@@ -598,6 +599,11 @@ footer {
 
   .skill-card {
     font-size: 1rem;
+    padding: 5px 7px;
+  }
+
+  .skills-sec {
+    font-size: 1rem;
   }
 
   /* ===== PROJECT SEC ===== */
@@ -611,10 +617,13 @@ footer {
   }
 
   .card-links {
-    display: none;
+    flex-direction: column;
+    margin: 0;
   }
 
-  .project-card img {
+  .project-card {
+    padding-bottom: 10px;
+    grid-template-rows: 0.5fr 1fr;
   }
 
   /* ===== CONTACT SEC ===== */
@@ -632,7 +641,7 @@ footer {
   }
 
   .home-page .hero span {
-    font-size: 26px;
+    font-size: 20px;
   }
 
   /* sec1 */

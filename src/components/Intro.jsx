@@ -32,10 +32,13 @@ export default function Intro() {
                 <p>To use my knowledge, problem solving and creative thinking abilities to build beautiful and efficient software solutions.</p>
             
                 <div className="skills-sec">
-                    <h3>My skills:</h3>
-                <div className="skill-cards-container">{skillsArr()}</div>
-                <span>.. plus more to come!</span>
-                </div>
+                    <h3 className="sec-header-2">My skills:</h3>
+                    <div className="skill-cards-container">
+                        {skillsArr()}
+                    </div>
+                    <span>.. plus more to come!</span>
+                 </div>
+            
             </section>
     );
 }
