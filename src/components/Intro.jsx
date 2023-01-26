@@ -1,6 +1,21 @@
-import { DiHtml5, DiCss3, DiGit, DiGithubBadge, DiSqllite, DiMongodb} from "react-icons/di";
-import { SiJavascript, SiReact  } from "react-icons/si";
 export default function Intro() {
+
+    const skillsArr = () => {
+
+        const skills = [
+            "HTML + CSS",
+            "JavaScript",
+            "React.js",
+            "Bootstrap",
+            "Tailwind",
+            "MongoDB + Mongoose",
+            "Postman",
+            "REST API's",
+            "Express.js"];
+        
+        return skills.map(skill => <span className="skill-card">{skill}</span>)
+    }
+
 
     return (
         
@@ -16,22 +31,11 @@ export default function Intro() {
             
                 <p>To use my knowledge, problem solving and creative thinking abilities to build beautiful and efficient software solutions.</p>
             
-                {/* <div>
+                <div className="skills-sec">
                     <h3>My skills:</h3>
-
-                    <div className="skills-icons">
-                        <DiHtml5 />
-                        <DiCss3/>
-                        <SiJavascript/>
-                        <DiGit/>
-                        <DiGithubBadge/>
-                        <DiMongodb/>
-                        <SiReact/>
-                        <DiSqllite/>
-                    </div>
-
-                </div> */}
-                
+                <div className="skill-cards-container">{skillsArr()}</div>
+                <span>.. plus more to come!</span>
+                </div>
             </section>
     );
 }

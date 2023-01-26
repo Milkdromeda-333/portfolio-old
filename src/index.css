@@ -10,6 +10,7 @@
   --red-tint: rgb(107, 40, 54);
   --blue: #42354c;
   --blue-tone: #3d2f47;
+  --border-radius: 10px;
 }
 
 body {
@@ -23,7 +24,6 @@ html {
 }
 .body {
   background-image: url(./assets/nnnoise3.svg);
-
   background-position: center;
   background-size: cover;
 }
@@ -49,6 +49,7 @@ h3 {
 
 .sec-header-2 {
   font-size: 32px;
+  margin: 1rem;
 }
 
 /* ===== NAVBAR ===== */
@@ -178,7 +179,7 @@ h1 {
   padding: 0.5rem 1.5rem;
   font-size: 1.3rem;
   text-shadow: 2px 2px 5px black;
-  border-radius: 10px;
+  border-radius: var(--border-radius);
   margin-top: 1rem;
   border: 3px solid var(--red);
   transition: all 200ms ease-in;
@@ -256,20 +257,33 @@ h3 {
 }
 
 /* ===== SKILLS ===== */
-.skills-icons {
-  font-size: 3rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  color: var(--blue);
-  padding-bottom: 5rem;
+.skills-sec {
+  margin-block: 1.5rem;
+  padding-inline: 10%;
+  font-size: 1.5rem;
 }
 
-.skills-icons svg:nth-of-type(odd) {
-  color: var(--green);
+.skills-sec h3 {
+  margin: 1rem;
+}
+
+.skill-cards-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.skill-card {
+  background-color: var(--sand);
+  color: var(--blue);
+  padding: 5px 15px;
+  border-radius: var(--border-radius);
+  font-size: 1.3rem;
+  box-shadow: 1px 1px 5px black;
 }
 
 /* ===== Portfolio Page ===== */
@@ -299,9 +313,9 @@ h3 {
   width: 80%;
   background-position: center;
   background-size: cover;
-  border-radius: 5px;
   box-shadow: 2px 2px 5px solid var(--red);
-  border: 4px solid var(--red);
+  border: 3px solid var(--red);
+  border-radius: var(--border-radius);
   text-align: center;
   background-color: var(--green);
   color: var(--sand);
@@ -340,7 +354,7 @@ h3 {
   box-shadow: inset 0px 1px 0px 0px #f5978e;
   background: linear-gradient(to bottom, var(--sand) 5%, var(--sand-tone) 100%);
   background-color: var(--sand);
-  border-radius: 6px;
+  border-radius: var(--border-radius);
   border: 1px solid var(--red);
   display: inline-block;
   cursor: pointer;
@@ -380,24 +394,6 @@ h3 {
   background: linear-gradient(to bottom, var(--red-tint) 5%, var(--red) 100%);
 }
 
-/* ===== PROJECT PAGE ===== */
-.project-page {
-  position: absolute;
-  content: "";
-  z-index: 999;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  /*  width: 40vw; */
-  background-color: var(--sand);
-  color: var(--green);
-  transition: all 300ms ease-in-out;
-}
-
-.project-page.active {
-  right: 0;
-}
-
 /* ===== CONTACT PAGE ===== */
 .contact-page {
   display: flex;
@@ -420,18 +416,19 @@ h3 {
 
 .email-form input {
   height: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .email-form textarea {
   display: block;
-  resize: horizontal;
   max-width: 90vw;
   height: 150px;
+  min-height: 100px;
 }
 
 .email-form textarea,
 .email-form input {
-  border-radius: 15px;
+  border-radius: var(--border-radius);
   width: 50vw;
   border: 3px solid var(--green);
   background-color: rgb(238, 238, 238);
@@ -452,8 +449,6 @@ h3 {
   border-radius: 5px;
   background-color: var(--red);
   color: var(--sand);
-
-  /* box-shadow: inset 0px 1px 0px 0px #cf866c; */
   background: linear-gradient(to bottom, var(--red) 5%, var(--red-tint) 100%);
   cursor: pointer;
   border: 2px solid var(--sand-tone);
@@ -591,7 +586,6 @@ footer {
 
   .sec1 h2 {
     font-size: 2rem;
-    /* margin: 0 3rem; */
   }
 
   .sec1 .pronounciation {
@@ -599,6 +593,10 @@ footer {
   }
 
   .sec1 p {
+    font-size: 1rem;
+  }
+
+  .skill-card {
     font-size: 1rem;
   }
 
@@ -629,6 +627,10 @@ footer {
 
 @media (max-width: 300px) {
   /* hero */
+  .hero h1 {
+    font-size: 50px;
+  }
+
   .home-page .hero span {
     font-size: 26px;
   }
