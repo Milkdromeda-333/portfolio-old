@@ -39,6 +39,11 @@ h3 {
   color: var(--sand);
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .sec-header {
   font-size: 3rem;
 }
@@ -258,10 +263,6 @@ h3 {
   font-size: 1.5rem;
 }
 
-/* .skills-sec h3 {
-  margin: 1rem;
-} */
-
 .skill-cards-container {
   display: flex;
   flex-direction: row;
@@ -286,6 +287,11 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  color: var(--sand);
+  font-size: 1.5rem;
+  margin-inline: 16px;
+  text-align: center;
 }
 
 .portfolio-page h2 {
@@ -330,6 +336,7 @@ h3 {
   justify-content: center;
   align-items: center;
   padding-bottom: 1rem;
+  font-size: 1rem;
 }
 
 .card-info h3 {
@@ -388,6 +395,28 @@ h3 {
 
 .project-card button:hover {
   background: linear-gradient(to bottom, var(--red-tint) 5%, var(--red) 100%);
+}
+
+.portfolio-page-github-link {
+  position: relative;
+}
+
+.portfolio-page-github-link::before {
+  content: "";
+  background-color: var(--blue);
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  width: 100%;
+  height: 8px;
+  z-index: -1;
+  transition: all 100ms ease-in-out;
+}
+
+.portfolio-page-github-link:hover::before {
+  bottom: 0;
+  height: 100%;
+  background-color: var(--green);
 }
 
 /* ===== CONTACT PAGE ===== */

@@ -20,6 +20,8 @@ During the course of building this project I:
 
 - Realized that the more that I build, the better I'm getting at thinking of solutions. I used to SUCK at making responsive navbars, but now its easy-peasy. I did so by struggling through the learning phase.
 
+- Started to seriously think about CSS methodologies to make more effiient CSS.
+
 Questions:
 
 - Im not entirely sure that I need or correctly implelmented the browserRouter in main.jsx

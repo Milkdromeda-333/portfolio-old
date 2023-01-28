@@ -10,7 +10,7 @@ export default function Hero() {
                 <h1>Anjanique Mackey</h1>
 
                 <span>
-                 Full Stack JavaScript Developer |<wbr/> Creative Problem Solver |<wbr/> Life Long Learner
+                 Web Developer |<wbr /> Creative Problem Solver |<wbr /> Life Long Learner
                 </span>
 
                 <a href="#contact-page" className="hero-btn">Contact me</a>

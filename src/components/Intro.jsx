@@ -25,7 +25,7 @@ export default function Intro() {
                     <span className="pronounciation">(Anne-Juh-Neek Mack-ee)</span>
                 </h2>
 
-                <p>I'm a MERN Full-stack Web Developer who has a soft spot for JavaScript and web design. My motto is that I build beautiful user experiences and write smart code. Learning is my greatest hobby, and web development has been the perfect endeavor. Check out my Github <a href="https://github.com/Milkdromeda-333" target="_blank">here</a>.</p>
+                <p>I'm a MERN Web Developer who has a burning passion for web design and building web applications. I love learning, taking opportunities to be creative, doing hard stuff, reading science fiction books, and helping others. Don't forget to view my projects <a href="https://github.com/Milkdromeda-333" target="_blank">here</a>.</p>
 
                 <h3 className="sec-header-2">My mission is:</h3>
             
