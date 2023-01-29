@@ -6,11 +6,21 @@
   --sand-tone: #eaaa349f;
   --sand-tint: #fcc869;
   --green: #354c3c;
+  --green-tone: #304537;
   --red: #6a1d2f;
   --red-tint: rgb(107, 40, 54);
   --blue: #42354c;
   --blue-tone: #3d2f47;
   --border-radius: 10px;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 body {
@@ -55,7 +65,7 @@ a {
 
 /* ===== NAVBAR ===== */
 
-nav {
+.navbar {
   height: 5rem;
   padding: 10px;
   background-color: var(--green);
@@ -429,6 +439,7 @@ h3 {
   color: var(--sand);
   margin-top: 20px;
   padding-bottom: 2rem;
+  margin-bottom: -370px;
 }
 
 .email-form {
@@ -484,6 +495,62 @@ h3 {
   border-color: var(--sand);
 }
 
+/* FLOATING NAV */
+.floating-nav {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 10px;
+  right: 15px;
+  float: right;
+  transition: all 200ms ease-in-out;
+  z-index: 50;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.navigation-icon {
+  color: var(--green);
+  font-size: 40px;
+  float: right;
+  transition: all 100ms ease-in-out;
+}
+
+.menu {
+  background-color: var(--green);
+  color: var(--sand);
+  width: 200px;
+  height: 300px;
+  margin-bottom: 10px;
+  transition: 200ms all ease-out;
+  border-left: 4px solid var(--red);
+  border-bottom: 4px solid var(--red);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  right: -100%;
+}
+
+.menu.active {
+  right: 1px;
+}
+
+.menu a {
+  width: 100%;
+  height: 25%;
+  display: grid;
+  place-content: center;
+  border-top: 4px solid var(--red);
+  border-right: 4px solid var(--red);
+}
+
+.menu a:hover {
+  background-color: var(--green-tone);
+}
+
 /* ===== FOOTER ===== */
 
 footer {
@@ -498,6 +565,7 @@ footer {
   text-align: center;
   background-image: url(./assets/nnnoise.svg);
   font-size: 1.2rem;
+  clear: both;
 }
 
 .keep-together {
@@ -571,6 +639,20 @@ footer {
 }
 
 @media (max-width: 600px) {
+  .navbar {
+    height: 4rem;
+    width: 100%;
+    padding: 5px 1rem;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+
+    box-shadow: none;
+  }
+
+  .logo {
+    padding-left: 15px;
+  }
   .hamburger-inner,
   .hamburger-inner::before,
   .hamburger-inner::after {
@@ -655,7 +737,16 @@ footer {
     grid-template-rows: 0.5fr 1fr;
   }
 
+  .portfolio-page p {
+    font-size: 1rem;
+  }
+
   /* ===== CONTACT SEC ===== */
+
+  .contact-page {
+    margin-bottom: 0;
+  }
+
   .email-form textarea,
   .email-form input {
     width: 80vw;
@@ -665,6 +756,19 @@ footer {
   .email-form textarea,
   .email-form input {
     padding: 0;
+  }
+
+  .contact-page label {
+    font-size: 1rem;
+  }
+
+  /* ===== FLOATING NAV ===== */
+  .floating-nav {
+    display: none;
+  }
+
+  .footer {
+    font-size: 1rem;
   }
 }
 
