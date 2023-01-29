@@ -3,7 +3,7 @@ export default function ContactPage() {
 
     return (
         <section className="contact-page" id="contact-page">
-
+            <div className="contact-form-container">
             <h2 className='sec-header'>Contact me.</h2>
 
             <form action="" className='email-form'>
@@ -19,7 +19,8 @@ export default function ContactPage() {
                 
                 <button>Submit</button>
 
-            </form>
+                </form>
+                </div>
         </section>
     );
 }

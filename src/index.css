@@ -17,6 +17,7 @@
 html {
   box-sizing: border-box;
 }
+
 *,
 *:before,
 *:after {
@@ -161,6 +162,9 @@ a {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+
+  position: relative;
+  z-index: 50;
 }
 
 .hero img {
@@ -301,6 +305,7 @@ h3 {
   color: var(--sand);
   font-size: 1.5rem;
   margin-inline: 16px;
+  margin-bottom: 3rem;
   text-align: center;
 }
 
@@ -431,27 +436,36 @@ h3 {
 
 /* ===== CONTACT PAGE ===== */
 .contact-page {
+  color: var(--sand);
+  margin-bottom: -370px;
+  padding-bottom: 3rem;
+  scroll-margin-top: 1.5rem;
+}
+
+.contact-form-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  color: var(--sand);
-  margin-top: 20px;
-  padding-bottom: 2rem;
-  margin-bottom: -370px;
+  border: 3px solid var(--green);
+  border-radius: var(--border-radius);
+  background-color: var(--blue);
+  background-image: url("./assets/nnnoise.svg");
+  background-size: cover;
+  padding-bottom: 1rem;
+  width: 80%;
+  margin-inline: auto;
 }
 
 .email-form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 0.5rem;
 }
 
 .email-form input {
-  height: 2rem;
+  height: 2.5rem;
   margin-bottom: 1.5rem;
 }
 
@@ -499,12 +513,11 @@ h3 {
 .floating-nav {
   position: -webkit-sticky;
   position: sticky;
-  bottom: 10px;
+  bottom: 150px;
   right: 15px;
   float: right;
   transition: all 200ms ease-in-out;
-  z-index: 50;
-  margin-bottom: 1rem;
+  z-index: 49;
   overflow: hidden;
 }
 
@@ -513,6 +526,7 @@ h3 {
   font-size: 40px;
   float: right;
   transition: all 100ms ease-in-out;
+  cursor: pointer;
 }
 
 .menu {
@@ -566,6 +580,7 @@ footer {
   background-image: url(./assets/nnnoise.svg);
   font-size: 1.2rem;
   clear: both;
+  /* margin-top: 2rem; */
 }
 
 .keep-together {
@@ -646,7 +661,6 @@ footer {
     position: fixed;
     top: 0;
     z-index: 999;
-
     box-shadow: none;
   }
 
@@ -745,12 +759,18 @@ footer {
 
   .contact-page {
     margin-bottom: 0;
+    padding-bottom: 2rem;
+  }
+
+  .email-form {
+    width: 100%;
+    padding: 1rem;
   }
 
   .email-form textarea,
   .email-form input {
-    width: 80vw;
     font-size: 1rem;
+    width: 100%;
   }
 
   .email-form textarea,
