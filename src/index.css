@@ -6,7 +6,7 @@
   --sand-tone: #eaaa349f;
   --sand-tint: #fcc869;
   --green: #354c3c;
-  --green-tone: #304537;
+  --green-tone: #2a3d30;
   --red: #6a1d2f;
   --red-tint: rgb(107, 40, 54);
   --blue: #42354c;
@@ -18,10 +18,43 @@ html {
   box-sizing: border-box;
 }
 
+::-moz-selection {
+  /* Code for Firefox */
+  color: var(--sand);
+  background: var(--blue);
+}
+
+::selection {
+  color: var(--sand);
+  background: var(--blue);
+}
+
 *,
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #f3b646 #354c3c;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 14px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #354c3c;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #f3b646;
+  border-radius: 3px;
+  border: 2px ridge #ffffff;
 }
 
 body {
@@ -150,7 +183,7 @@ a {
   background-position: center;
   background-size: cover;
 
-  min-height: 80vh;
+  min-height: 85vh;
   padding-inline: 3.5rem;
   background-repeat: no-repeat;
   font-family: var(--decor-font);
@@ -326,6 +359,7 @@ h3 {
   gap: 2rem;
   width: 100%;
 }
+
 .project-card {
   width: 80%;
   background-position: center;
@@ -414,6 +448,7 @@ h3 {
 
 .portfolio-page-github-link {
   position: relative;
+  padding: 3px;
 }
 
 .portfolio-page-github-link::before {
@@ -423,7 +458,8 @@ h3 {
   left: 0;
   bottom: 3px;
   width: 100%;
-  height: 8px;
+  height: 10px;
+  /* z index to put purple behind element */
   z-index: -1;
   transition: all 100ms ease-in-out;
 }
@@ -447,7 +483,7 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 3px solid var(--green);
+  border: 4px solid var(--red);
   border-radius: var(--border-radius);
   background-color: var(--blue);
   background-image: url("./assets/nnnoise.svg");
@@ -513,20 +549,28 @@ h3 {
 .floating-nav {
   position: -webkit-sticky;
   position: sticky;
-  bottom: 150px;
+  bottom: 20px;
   right: 15px;
   float: right;
-  transition: all 200ms ease-in-out;
-  z-index: 49;
+  /* to go beneath the .hero z-index */
+  /* z-index: 49; */
   overflow: hidden;
 }
 
 .navigation-icon {
   color: var(--green);
-  font-size: 40px;
+  font-size: 50px;
   float: right;
-  transition: all 100ms ease-in-out;
+  transition: 200ms all ease-out;
   cursor: pointer;
+}
+
+.navigation-icon:hover {
+  color: var(--green-tone);
+}
+
+.navigation-icon.active {
+  transform: unset;
 }
 
 .menu {
@@ -559,6 +603,7 @@ h3 {
   place-content: center;
   border-top: 4px solid var(--red);
   border-right: 4px solid var(--red);
+  user-select: none;
 }
 
 .menu a:hover {
@@ -580,7 +625,6 @@ footer {
   background-image: url(./assets/nnnoise.svg);
   font-size: 1.2rem;
   clear: both;
-  /* margin-top: 2rem; */
 }
 
 .keep-together {
@@ -594,6 +638,11 @@ footer {
 
 .socials-icons svg:hover {
   color: var(--sand-tint);
+}
+
+footer span {
+  /* clicking the floating nav icon tends to selects the text */
+  user-select: none;
 }
 
 /* ===== MEDA QUERIES ===== */
@@ -651,17 +700,25 @@ footer {
   .sec-header {
     font-size: 2rem;
   }
+
+  /* ===== FLOATING NAV ===== */
+  .floating-nav {
+    display: none;
+  }
 }
 
 @media (max-width: 600px) {
   .navbar {
     height: 4rem;
     width: 100%;
-    padding: 5px 1rem;
+    /* padding: 5px 1rem; */
     position: fixed;
     top: 0;
     z-index: 999;
-    box-shadow: none;
+
+    -webkit-box-shadow: 0px 4px 22px 0px rgba(0, 0, 0, 0.43);
+    -moz-box-shadow: 0px 4px 22px 0px rgba(0, 0, 0, 0.43);
+    box-shadow: 0px 4px 22px 0px rgba(0, 0, 0, 0.43);
   }
 
   .logo {
@@ -691,6 +748,10 @@ footer {
 
   .nav-links.is-active {
     right: 0;
+  }
+
+  .nav-links a::before {
+    bottom: 2px;
   }
 
   /* Hero */
@@ -749,10 +810,15 @@ footer {
   .project-card {
     padding-bottom: 10px;
     grid-template-rows: 0.5fr 1fr;
+    width: 100%;
   }
 
   .portfolio-page p {
     font-size: 1rem;
+  }
+
+  .portfolio-page-github-link::before {
+    bottom: 2px;
   }
 
   /* ===== CONTACT SEC ===== */
@@ -782,20 +848,28 @@ footer {
     font-size: 1rem;
   }
 
-  /* ===== FLOATING NAV ===== */
-  .floating-nav {
-    display: none;
-  }
-
   .footer {
     font-size: 1rem;
   }
 }
 
 @media (max-width: 300px) {
+  .nav-links a::before {
+    bottom: 2px;
+  }
+
+  .nav-links a {
+    text-decoration: wavy;
+    text-decoration-color: #f3b646;
+  }
   /* hero */
   .hero h1 {
     font-size: 50px;
+  }
+
+  .hero span {
+    font-size: 1.2rem;
+    line-height: unset;
   }
 
   .home-page .hero span {
@@ -816,7 +890,12 @@ footer {
   }
 
   /* ===== CONTACT SEC ===== */
-  .contact-page label {
+
+  .contact-form-container {
+    width: 90%;
+  }
+
+  label {
     font-size: 1rem;
   }
 

@@ -53,3 +53,7 @@ place-content: center;
 - I had a hard time with styling, specifically with styles over-riding others because of specificity. It was mostly caused by my use of html element selectord instead of class selectors.
 
 - If text is not centering, try text-align: center!
+
+Known bugs:
+
+- Floating nav svg tends to not follow with the state change, i believe it is when the state re-runs but not the screen.

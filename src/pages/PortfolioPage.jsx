@@ -8,7 +8,7 @@ export default function PortfolioPage() {
     return (
         <section className='portfolio-page' id="portfolio-page">
 
-            <h2 className='sec-header'>Notable Projects</h2>
+            <h2 className='sec-header'>Notable Projects.</h2>
 
             <div className="project-cards">{projects}</div>
 

@@ -13,7 +13,7 @@ export default function Hero() {
                  Web Developer |<wbr /> Creative Problem Solver |<wbr /> Life Long Learner
                 </span>
 
-                <a href="#contact-page" className="hero-btn">Contact me</a>
+                <a href="https://drive.google.com/file/d/1Fw030GC4fp3xjvq1P1kZ63KeTr6uo02f/view?usp=sharing" target="_blank" className="hero-btn">See My Resume.</a>
 
             </div>
 

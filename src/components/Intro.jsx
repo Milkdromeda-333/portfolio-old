@@ -5,15 +5,17 @@ export default function Intro() {
         const skills = [
             "HTML + CSS",
             "JavaScript",
+            "Node.js",
             "React.js",
             "Bootstrap",
             "Tailwind",
-            "MongoDB + Mongoose",
+            "MongoDB",
+            "Mongoose",
             "Postman",
             "REST API's",
             "Express.js"];
         
-        return skills.map(skill => <span className="skill-card">{skill}</span>)
+        return skills.map(skill => <span className="skill-card" key={skill}>{skill}</span>)
     }
 
 

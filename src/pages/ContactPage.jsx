@@ -17,7 +17,7 @@ export default function ContactPage() {
                 <label htmlFor="email-body">Email body:</label>
                 <textarea rows='10' required />
                 
-                <button>Submit</button>
+                <button>Submit.</button>
 
                 </form>
                 </div>

@@ -11,7 +11,7 @@ export default function ProjectCard(props) {
             </div>
 
             <div className="card-info">
-                <h3 className="sec-header-2">{name}</h3>
+                <h3 className="sec-header-2">{name}.</h3>
 
                 <span>Tech used: {technologies.join(", ")}</span>
                 

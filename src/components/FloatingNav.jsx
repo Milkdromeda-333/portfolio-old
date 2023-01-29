@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
-import { BsFillArrowUpLeftCircleFill as OpenMenuIcon, BsArrowUpLeftCircle as ClosedMenuIcon } from "react-icons/bs";
+
+import {CgSmile, CgSmileUpside} from "react-icons/cg"
 
 export default function FloatingNav() {
 
@@ -27,8 +28,8 @@ export default function FloatingNav() {
             </nav>
 
             {isNavActive ?
-                <OpenMenuIcon  className={`navigation-icon ${isNavActive && "active"}`} onClick={toggleNav} /> :
-                <ClosedMenuIcon className={`navigation-icon ${isNavActive && "active"}`} onClick={toggleNav} />}
+                <CgSmile className={`navigation-icon ${isNavActive && "active"}`} onClick={toggleNav} /> :
+                <CgSmileUpside className={`navigation-icon ${isNavActive && "active"}`} onClick={toggleNav} />}
             
         </div>
     );
