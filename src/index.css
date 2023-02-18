@@ -1,6 +1,6 @@
 :root {
-  --regular-font: "Lora", serif;
-  --decor-font: "Akaya Telivigala", cursive;
+  --regular-font: 'Lora', serif;
+  --decor-font: 'Akaya Telivigala', cursive;
   --orange: #9b461f;
   --sand: #f3b646;
   --sand-tone: #eaaa349f;
@@ -18,12 +18,13 @@ html {
   box-sizing: border-box;
 }
 
-::-moz-selection {
   /* Code for Firefox */
+::-moz-selection {
   color: var(--sand);
   background: var(--blue);
 }
 
+/* hightlight/selection color */
 ::selection {
   color: var(--sand);
   background: var(--blue);
@@ -89,12 +90,51 @@ a {
 }
 
 .sec-header {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .sec-header-2 {
   font-size: 26px;
   margin: 1rem;
+}
+
+.tooltip{
+  position: relative;
+  display: inline-block;
+  border-bottom: 3px dotted var(--green);
+  cursor: default;
+}
+
+.tooltip .pronounciation {
+  visibility: hidden;
+  width: 120px;
+  background-color: var(--blue);
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  position: absolute;
+  width: 50%;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -25%;
+  z-index: 999;
+}
+
+.tooltip:hover .pronounciation {
+  visibility: visible;
+}
+
+.tooltip .pronounciation::after {
+ content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--blue) transparent transparent transparent;
 }
 
 /* ===== NAVBAR ===== */
@@ -113,6 +153,7 @@ a {
   align-items: center;
 
   position: relative;
+  z-index: 100;
 
   box-shadow: 0px 20px 21px -10px rgba(53, 76, 60, 1);
   -webkit-box-shadow: 0px 20px 21px -10px rgba(53, 76, 60, 1);
@@ -197,7 +238,6 @@ a {
   align-items: center;
 
   position: relative;
-  z-index: 50;
 }
 
 .hero img {
@@ -252,7 +292,8 @@ h1 {
   align-items: center;
   text-align: center;
   color: var(--sand);
-  margin: 0 4rem;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .sec1,
@@ -260,15 +301,16 @@ h3 {
   font-size: 2rem;
 }
 
-.sec1 h2 {
-  font-size: 3rem;
+.sec1-header {
+  font-size: 2.5rem;
   margin-bottom: 1rem;
   position: relative;
   z-index: 1;
 }
 
 .sec1 .pronounciation {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  padding: 5px;
 }
 
 .sec1 p {
@@ -305,7 +347,6 @@ h3 {
 
 /* ===== SKILLS ===== */
 .skills-sec {
-  margin-block: 1.5rem;
   padding-inline: 10%;
   font-size: 1.5rem;
 }
@@ -338,7 +379,7 @@ h3 {
   color: var(--sand);
   font-size: 1.5rem;
   margin-inline: 16px;
-  margin-bottom: 3rem;
+  margin-block: 3rem;
   text-align: center;
 }
 
@@ -516,7 +557,7 @@ h3 {
 .email-form input {
   border-radius: var(--border-radius);
   width: 50vw;
-  border: 3px solid var(--green);
+  border: 2px solid var(--sand-tint);
   background-color: rgb(238, 238, 238);
   padding: 5px 10px;
   font-family: var(--regular-font);
@@ -538,6 +579,7 @@ h3 {
   background: linear-gradient(to bottom, var(--red) 5%, var(--red-tint) 100%);
   cursor: pointer;
   border: 2px solid var(--sand-tone);
+  margin-top: 1rem;
 }
 
 .email-form button:hover {
@@ -549,12 +591,11 @@ h3 {
 .floating-nav {
   position: -webkit-sticky;
   position: sticky;
-  bottom: 20px;
+  bottom: 25px;
   right: 15px;
   float: right;
-  /* to go beneath the .hero z-index */
-  /* z-index: 49; */
   overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 .navigation-icon {
@@ -697,13 +738,22 @@ footer span {
     font-size: 1rem;
   }
 
-  .sec-header {
+  .sec1-header {
     font-size: 2rem;
+  }
+
+  .contact-page{
+    margin-bottom: 0;
   }
 
   /* ===== FLOATING NAV ===== */
   .floating-nav {
     display: none;
+  }
+
+  .skills-sec,
+  .skill-card{
+    font-size: 1rem;
   }
 }
 
@@ -711,7 +761,6 @@ footer span {
   .navbar {
     height: 4rem;
     width: 100%;
-    /* padding: 5px 1rem; */
     position: fixed;
     top: 0;
     z-index: 999;
@@ -754,25 +803,28 @@ footer span {
     bottom: 2px;
   }
 
+  .sec-header{
+    font-size: 26px;
+  }
+
   /* Hero */
   .hero h1 {
-    font-size: 55px;
+    font-size: 45px;
     margin-bottom: 1.5rem;
   }
 
-  .home-page .hero span {
-    font-size: 26px;
+  .hero span {
+    font-size: 20px;
     line-height: 35px;
   }
 
   /* sec1 */
   .sec1 {
-    padding-inline: 1rem;
-    margin: 0;
+    width: 100%;
   }
 
   .sec1 h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .sec1 .pronounciation {
@@ -862,9 +914,10 @@ footer span {
     text-decoration: wavy;
     text-decoration-color: #f3b646;
   }
+
   /* hero */
   .hero h1 {
-    font-size: 50px;
+    font-size: 40px;
   }
 
   .hero span {
@@ -874,6 +927,10 @@ footer span {
 
   .home-page .hero span {
     font-size: 20px;
+  }
+
+  .hero-btn{
+    padding: 4px 6px;
   }
 
   /* sec1 */

@@ -14,7 +14,7 @@ export default function ContactPage() {
                 <label htmlFor="subject-line">Subject line:</label>
                 <input type="text" id='subject-line' required />
 
-                <label htmlFor="email-body">Email body:</label>
+                <label htmlFor="email-body">Message:</label>
                 <textarea rows='10' required />
                 
                 <button>Submit.</button>

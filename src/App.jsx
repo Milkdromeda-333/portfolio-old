@@ -8,7 +8,8 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 
 function App() {
-
+  window.location.hash = window.location.hash
+  // console.log(window.location)
   return (
     <div className="App">
       <Navbar />

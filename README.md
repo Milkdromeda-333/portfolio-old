@@ -57,3 +57,5 @@ place-content: center;
 Known bugs:
 
 - Floating nav svg tends to not follow with the state change, i believe it is when the state re-runs but not the screen.
+
+- url doesnt update after navigating with an anchor tag

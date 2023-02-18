@@ -12,7 +12,7 @@ export default function PortfolioPage() {
 
             <div className="project-cards">{projects}</div>
 
-            <p> View more of my completed projects on my  github&nbsp;
+            <p> View more of my completed projects in my dedicated github list&nbsp;
                 <a href="https://github.com/stars/Milkdromeda-333/lists/my-projects"
                     target="_blank" className="portfolio-page-github-link">here</a>.
             </p>

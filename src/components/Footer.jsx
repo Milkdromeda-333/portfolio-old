@@ -11,7 +11,7 @@ export default function Footer() {
                 <span className="keep-together"> Anjanique M. 💻🌏</span>
             </span>
 
-            <span>Follow my socials!</span>
+            <span>Check out my socials!</span>
 
             <div className="socials-icons">
 

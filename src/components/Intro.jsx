@@ -1,3 +1,4 @@
+
 export default function Intro() {
 
     const skillsArr = () => {
@@ -13,7 +14,9 @@ export default function Intro() {
             "Mongoose",
             "Postman",
             "REST API's",
-            "Express.js"];
+            "Express.js",
+            "Git",
+            "Github"];
         
         return skills.map(skill => <span className="skill-card" key={skill}>{skill}</span>)
     }
@@ -23,15 +26,24 @@ export default function Intro() {
         
             <section className="sec1" id="about-me">
 
-                <h2 className="sec-header">Howdy! My name is Anjanique Mackey.<br />
-                    <span className="pronounciation">(Anne-Juh-Neek Mack-ee)</span>
-                </h2>
+            <h2 className="sec1-header">
+                Howdy! My name is&nbsp;
 
-                <p>I'm a MERN Web Developer who has a burning passion for web design and building web applications. I love learning, taking opportunities to be creative, doing hard stuff, reading science fiction books, and helping others. I am a Dallas, Texas native, but am currently stationed in Las Vegas, Nevada with my husband and our annoying (but, cute) cat-friend. Don't forget to check out my codes <a href="https://github.com/Milkdromeda-333" target="_blank">here</a>.</p>
+                <div className="tooltip">
+                    <span> Anjanique</span>
+                    <span> Mackey.</span>
+                    <span className="pronounciation">Anne-Juh-Neek Mack-ee</span>
+                </div>
 
-                <h3 className="sec-header-2">My mission is:</h3>
-            
-                <p>To use my knowledge, problem solving and creative thinking abilities to build beautiful and efficient software solutions.</p>
+                <span>
+                </span>
+                <br />
+                
+            </h2>
+
+                <p>I'm a MERN Web Developer who has a burning passion for web design and building web applications. I love learning, taking opportunities to be creative, doing hard stuff, reading science fiction books, and helping others. I am a Dallas, Texas native, but am currently stationed in Las Vegas, Nevada with my husband and our cat baby. You can check out my codes <a href="https://github.com/Milkdromeda-333" target="_blank">here</a>.</p>
+
+                
             
             <div className="skills-sec">
                 
@@ -41,7 +53,7 @@ export default function Intro() {
                     {skillsArr()}
                 </div>
                     
-                <span>.. plus more to come!</span>
+                <span>... and more to come!</span>
                 
             </div>
             
