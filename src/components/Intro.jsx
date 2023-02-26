@@ -8,14 +8,14 @@ export default function Intro() {
             "JavaScript",
             "Node.js",
             "React.js",
-            "Bootstrap",
+            "JWTs",
+            "Git",
             "Tailwind",
             "MongoDB",
             "Mongoose",
             "Postman",
             "REST API's",
             "Express.js",
-            "Git",
             "Github"];
         
         return skills.map(skill => <span className="skill-card" key={skill}>{skill}</span>)

@@ -13,7 +13,7 @@
   --blue-tone: #3d2f47;
   --border-radius: 10px;
 
-  --page-margin: 2rem;
+  --page-margin: 3rem;
   --small-viewport-header: 20px;
 }
 
@@ -363,6 +363,10 @@ h3 {
   font-size: 1.5rem;
 }
 
+.skills-sec span{
+  font-size: 20px;
+}
+
 .skill-cards-container {
   display: flex;
   flex-direction: row;
@@ -391,7 +395,7 @@ h3 {
   color: var(--sand);
   font-size: 1.5rem;
   margin-inline: 16px;
-  margin-block: 3rem;
+  margin-bottom: var(--page-margin);
   text-align: center;
 }
 
@@ -415,6 +419,11 @@ h3 {
 
 .project-card {
   width: 80%;
+  height: 280px;
+  overflow: hidden;
+  
+  background-image: url('src/assets/nnnoise.svg');
+  background-size: cover;
   background-position: center;
   background-size: cover;
   box-shadow: 2px 2px 5px solid var(--red);
@@ -429,6 +438,19 @@ h3 {
   grid-template-rows: 1fr;
   justify-items: center;
   align-items: center;
+
+}
+
+.project-img-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.project-img-container img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .card-info {
@@ -438,7 +460,8 @@ h3 {
   justify-content: center;
   align-items: center;
   padding-bottom: 1rem;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 8px black;
 }
 
 .card-info h3 {
@@ -457,6 +480,8 @@ h3 {
   color: var(--red);
   margin: 0.5rem;
   box-shadow: inset 0px 1px 0px 0px #f5978e;
+  
+  text-shadow: none;
   background: linear-gradient(to bottom, var(--sand) 5%, var(--sand-tone) 100%);
   background-color: var(--sand);
   border-radius: var(--border-radius);
@@ -472,12 +497,6 @@ h3 {
 .card-links a:hover {
   background: linear-gradient(to bottom, var(--sand-tint) 5%, var(--sand) 100%);
   background-color: var(--sand);
-}
-
-.project-img-container {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .project-card button {
@@ -708,6 +727,7 @@ footer span {
     font-size: 2rem;
   }
   .project-card {
+    height: unset;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     padding-bottom: 1rem;
@@ -870,6 +890,10 @@ footer span {
     font-size: 1rem;
   }
 
+  .skills-sec span{
+  font-size: 1rem;
+  }
+
   .project-card button {
     margin: 10px;
   }
@@ -978,6 +1002,10 @@ footer span {
   
   .card-info {
     padding-bottom: 0;
+  }
+
+  .card-info span{
+    font-size: 1rem;
   }
 
   .card-links a{

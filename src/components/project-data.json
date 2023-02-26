@@ -4,31 +4,53 @@
         "repoUrl": "https://github.com/Milkdromeda-333/makeup-market",
         "liveDemoUrl": "https://makeup-market.surge.sh/",
         "img": "makeup-market-2.png",
+        "gif": "makeup-market.gif",
         "description": "This project was made to practice consuming data from an open RESTful API, problem solving, and web design. I used React to build the front-end, axios for the HTTP request, and TailwindCSS to style.",
-        "technologies": ["React", "TailwindCSS", "HTML", "Axios"]
+        "technologies": [
+            "React",
+            "TailwindCSS",
+            "HTML",
+            "Axios"
+        ]
     },
     {
         "name": "Array Generator",
         "repoUrl": "https://github.com/Milkdromeda-333/array-generator",
         "liveDemoUrl": "https://milkdromeda-333.github.io/array-generator/",
         "img": "array-generator.png",
+        "gif": "array-generator.gif",
         "description": "This project was made to quickly and easily make and format arrays. At the time of making it, it had been a while since I worked with vanulla JavaScript, so it took determination and lots of research to remember how to make it come together. I also practiced problem solving to make the logic work.",
-        "technologies": ["JavaScript", "HTML", "CSS"]
+        "technologies": [
+            "JavaScript",
+            "HTML",
+            "CSS"
+        ]
     },
-   {
+    {
         "name": "Youtube Chrome Extension",
         "repoUrl": "https://github.com/Milkdromeda-333/youtube-ad-skipper-google-extension",
         "liveDemoUrl": "https://chrome.google.com/webstore/detail/press-skip-ad-button/ghcbnbgnehhbpieolmcckflnhoinffgd",
         "img": "yt-ad-skipper.png",
+        "gif": "yt-ad-skipper.gif",
         "description": "I realized that I did not have to keep pressing skip myself because I engineer software one day, so I decided to jump into the world of creatibg chrome extensions using an outdated youtube tutorial and the google chrome extensions forums. I learned that day that I am really good at learning on the spot, and how important reading docs are.",
-        "technologies": [ "HTML", "CSS","JavaScript"]
+        "technologies": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ]
     },
     {
         "name": "Ugly Thingz",
         "repoUrl": "https://github.com/Milkdromeda-333/ugly-thingz",
         "liveDemoUrl": "https://milkdromeda-333.github.io/ugly-thingz/",
         "img": "ugly-thingz.png",
+        "gif": "ugly-thingz.gif",
         "description": "With this project I practiced styling with CSS, and using an API to read, create, delete, and update data. I also realized that people will delete all of your data if they are given the opportunity, so it's wise to prepare for that. I also successfully deployed a React project to github-pages, which has proven to be a notable feat.",
-        "technologies": [ "React", "HTML","CSS","Axios"]
+        "technologies": [
+            "React",
+            "HTML",
+            "CSS",
+            "Axios"
+        ]
     }
 ]

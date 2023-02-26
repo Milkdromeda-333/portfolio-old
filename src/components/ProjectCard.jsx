@@ -2,12 +2,14 @@ import { RxExternalLink } from "react-icons/rx";
 
 export default function ProjectCard(props) {
 
-    const { name, repoUrl, liveDemoUrl, img, technologies } = props;
+    const { name, repoUrl, liveDemoUrl, img, technologies, gif } = props;
 
     return (
         <div className="project-card">
 
-            <img src={`/project-images/${img}`} alt={name} className="project-img-container" />
+            <div className="project-img-container">
+                <img src={`/project-images/${img}`} alt={name} onMouseOver={e => e.target.src = `/project-images/${gif}`} onMouseLeave={e => e.target.src = `/project-images/${img}`} />
+            </div>
 
             <div className="card-info">
                 <h3 className="sec-header-2">{name}.</h3>
