@@ -231,7 +231,7 @@ a {
   background-position: center;
   background-size: cover;
 
-  min-height: 85vh;
+  height: 85vh;
   padding-inline: 3.5rem;
   background-repeat: no-repeat;
   font-family: var(--decor-font);
@@ -826,6 +826,11 @@ footer span {
     font-size: 26px;
   }
 
+  .hero{
+    margin-top: 4rem;
+    height: 65vh;
+  }
+
   .hero h1 {
     font-size: 45px;
     margin-bottom: 1.5rem;
@@ -834,6 +839,10 @@ footer span {
   .hero span {
     font-size: 20px;
     line-height: 35px;
+  }
+
+  .hero-btn{
+    font-size: 1rem;
   }
 
   .sec1 {

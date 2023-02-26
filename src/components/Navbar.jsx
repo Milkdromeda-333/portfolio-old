@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom"
 import { useState } from "react";
 import Logo from "../assets/logo2.gif"
-import "../assets/hamburger.css"
 import { RxCross1, RxHamburgerMenu } from "react-icons/rx"
-import { GoThreeBars, GoX } from "react-icons/go";
 
 export default function Navbar() {
 
