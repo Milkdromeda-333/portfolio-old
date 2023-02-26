@@ -2,6 +2,8 @@ import { Link } from "react-router-dom"
 import { useState } from "react";
 import Logo from "../assets/logo2.gif"
 import "../assets/hamburger.css"
+import { RxCross1, RxHamburgerMenu } from "react-icons/rx"
+import { GoThreeBars, GoX } from "react-icons/go";
 
 export default function Navbar() {
 
@@ -16,13 +18,11 @@ export default function Navbar() {
                 <img src={Logo} alt="logo" className="logo" />
             </Link>
 
-            <button className={`hamburger hamburger--elastic ${isHamburgerActive ? "is-active" : ""}`} type="button" onClick={handleHamburger} aria-label="Open the menu" aria-expanded={isHamburgerActive ? "true" : "false"}>
-
-                <span className="hamburger-box">
-                    <span className="hamburger-inner"></span>
-                </span>
-
-            </button>  
+            {
+                isHamburgerActive ?
+                    <RxCross1 className="mobile-nav nav-cross" onClick={handleHamburger} /> :
+                    <RxHamburgerMenu className="mobile-nav" onClick={handleHamburger}/>
+            }
 
             <div className={`nav-links ${isHamburgerActive ? "is-active" : ""}`} >
                 

@@ -62,7 +62,6 @@ Known bugs:
 
 To-do:
 - add to my portfolio section. Make it more enticing.
-- fix name pronounciation on mobile
 - maybe change the orange color
 
 - dist issues.
