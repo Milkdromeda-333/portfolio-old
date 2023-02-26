@@ -7,8 +7,7 @@ export default function ProjectCard(props) {
     return (
         <div className="project-card">
 
-            <div className="project-img-container" style={{backgroundImage: `url(src/assets/project-images/${img})`}}>
-            </div>
+            <img src={`/project-images/${img}`} alt={name} className="project-img-container" />
 
             <div className="card-info">
                 <h3 className="sec-header-2">{name}.</h3>

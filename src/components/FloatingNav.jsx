@@ -4,7 +4,7 @@ import {CgSmile, CgSmileUpside} from "react-icons/cg"
 
 export default function FloatingNav() {
 
-    const [isNavActive, setIsNavActive] = useState(false);
+    const [isNavActive, setIsNavActive] = useState(true);
 
     
     const menuRef = useRef(null);

@@ -12,6 +12,9 @@
   --blue: #42354c;
   --blue-tone: #3d2f47;
   --border-radius: 10px;
+
+  --page-margin: 2rem;
+  --small-viewport-header: 20px;
 }
 
 html {
@@ -228,9 +231,11 @@ a {
   padding-inline: 3.5rem;
   background-repeat: no-repeat;
   font-family: var(--decor-font);
-  box-shadow: 0px -33px 21px -10px rgba(155, 70, 31, 1) inset;
-  -webkit-box-shadow: 0px -33px 21px -10px rgba(155, 70, 31, 1) inset;
-  -moz-box-shadow: 0px -33px 21px -10px rgba(155, 70, 31, 1) inset;
+  padding-bottom: var(--page-margin);
+
+  box-shadow: 0px 6px 17px 7px rgba(53,76,60,1);
+  -webkit-box-shadow: 0px 6px 17px 7px rgba(53,76,60,1);
+  -moz-box-shadow: 0px 6px 17px 7px rgba(53,76,60,1);
 
   display: flex;
   flex-direction: row;
@@ -293,6 +298,8 @@ h1 {
   text-align: center;
   color: var(--sand);
   margin: 0 auto;
+  padding-bottom: var(--page-margin);
+  padding-top: 4rem;
   width: 80%;
 }
 
@@ -303,14 +310,15 @@ h3 {
 
 .sec1-header {
   font-size: 2.5rem;
+  margin: 0;
   margin-bottom: 1rem;
   position: relative;
   z-index: 1;
 }
 
 .sec1 .pronounciation {
-  font-size: 1.2rem;
   padding: 5px;
+  font-size: 1.2rem;
 }
 
 .sec1 p {
@@ -465,7 +473,7 @@ h3 {
 .project-img-container {
   width: 100%;
   height: 100%;
-  background-size: cover;
+  object-fit: cover;
 }
 
 .project-card button {
@@ -699,6 +707,8 @@ footer span {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     padding-bottom: 1rem;
+
+    width: 50%;
   }
 
   .card-info span {
@@ -707,7 +717,6 @@ footer span {
 }
 
 @media (max-width: 880px) {
-  /* hero */
   .hero img {
     display: none;
   }
@@ -720,7 +729,6 @@ footer span {
     align-items: center;
   }
 
-  /* sec1 */
   .sec1 {
     padding-inline: 1rem;
     max-width: none;
@@ -746,7 +754,6 @@ footer span {
     margin-bottom: 0;
   }
 
-  /* ===== FLOATING NAV ===== */
   .floating-nav {
     display: none;
   }
@@ -754,6 +761,10 @@ footer span {
   .skills-sec,
   .skill-card{
     font-size: 1rem;
+  }
+
+  .project-card{
+    width: 70%;
   }
 }
 
@@ -807,7 +818,6 @@ footer span {
     font-size: 26px;
   }
 
-  /* Hero */
   .hero h1 {
     font-size: 45px;
     margin-bottom: 1.5rem;
@@ -818,7 +828,6 @@ footer span {
     line-height: 35px;
   }
 
-  /* sec1 */
   .sec1 {
     width: 100%;
   }
@@ -844,8 +853,6 @@ footer span {
     font-size: 1rem;
   }
 
-  /* ===== PROJECT SEC ===== */
-
   .project-card button {
     margin: 10px;
   }
@@ -862,7 +869,7 @@ footer span {
   .project-card {
     padding-bottom: 10px;
     grid-template-rows: 0.5fr 1fr;
-    width: 100%;
+    width: 80%;
   }
 
   .portfolio-page p {
@@ -872,8 +879,6 @@ footer span {
   .portfolio-page-github-link::before {
     bottom: 2px;
   }
-
-  /* ===== CONTACT SEC ===== */
 
   .contact-page {
     margin-bottom: 0;
@@ -915,13 +920,12 @@ footer span {
     text-decoration-color: #f3b646;
   }
 
-  /* hero */
   .hero h1 {
     font-size: 40px;
   }
 
   .hero span {
-    font-size: 1.2rem;
+    font-size: 20px;
     line-height: unset;
   }
 
@@ -933,31 +937,52 @@ footer span {
     padding: 4px 6px;
   }
 
-  /* sec1 */
   .sec1 h2 {
-    font-size: 26px;
+    font-size: var(--small-viewport-header);
   }
 
-  .sec1 p {
-    font-size: 16px;
+  .sec-header-2{
+    font-size: var(--small-viewport-header);
   }
-  /* ===== PORTFOLIO SEC ===== */
+
+  .project-card{
+    width: 100%;
+  }
+  
   .card-info {
     padding-bottom: 0;
   }
 
-  /* ===== CONTACT SEC ===== */
+  .card-links a{
+    padding-inline: 10px;
+  }
+
+  .portfolio-page h2{
+    font-size: var(--small-viewport-header);
+  }
 
   .contact-form-container {
     width: 90%;
   }
 
-  label {
-    font-size: 1rem;
+  .contact-form-container h2{
+    font-size: var(--small-viewport-header);
   }
 
-  /* ===== FOOTER SEC ===== */
-  footer {
-    font-size: 1rem;
+  .email-form button{
+    font-size: 16px;
+    width: unset;
+  }
+
+  .contact-form-container button,
+  label,
+  .card-info h3,
+  .sec1 p,
+  footer{
+    font-size: 16px;
+  }
+
+  .socials-icons svg{
+    font-size: 1.8rem;
   }
 }

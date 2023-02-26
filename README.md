@@ -59,3 +59,12 @@ Known bugs:
 - Floating nav svg tends to not follow with the state change, i believe it is when the state re-runs but not the screen.
 
 - url doesnt update after navigating with an anchor tag
+
+To-do:
+- add to my portfolio section. Make it more enticing.
+- fix name pronounciation on mobile
+- maybe change the orange color
+
+- dist issues.
+- images arent being loaded.
+- mini-nav defaults to open...
