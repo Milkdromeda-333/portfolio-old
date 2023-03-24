@@ -10,20 +10,26 @@
             "React",
             "TailwindCSS",
             "HTML",
-            "Axios"
+            "Axios",
+            "REST API"
         ]
     },
     {
-        "name": "Array Generator",
-        "repoUrl": "https://github.com/Milkdromeda-333/array-generator",
-        "liveDemoUrl": "https://milkdromeda-333.github.io/array-generator/",
-        "img": "array-generator.png",
-        "gif": "array-generator.gif",
-        "description": "This project was made to quickly and easily make and format arrays. At the time of making it, it had been a while since I worked with vanulla JavaScript, so it took determination and lots of research to remember how to make it come together. I also practiced problem solving to make the logic work.",
+        "name": "Makelist",
+        "repoUrl": "https://github.com/Milkdromeda-333/Makelist",
+        "liveDemoUrl": "TBA",
+        "img": "makelist.png",
+        "gif": "makelist.gif",
+        "description": "This website allows you to make checklists with items that can be set to be repeated without the hassle. It features beautiful and simple UI and UX, and an appealing dark and light mode.",
         "technologies": [
-            "JavaScript",
-            "HTML",
-            "CSS"
+            "React",
+            "Tailwind",
+            "NodeJS",
+            "Express",
+            "JWTs",
+            "MongoDB",
+            "Mongoose",
+            "Axios"
         ]
     },
     {
@@ -50,7 +56,8 @@
             "React",
             "HTML",
             "CSS",
-            "Axios"
+            "Axios",
+            "REST API"
         ]
     }
 ]
