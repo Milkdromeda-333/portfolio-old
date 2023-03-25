@@ -1,8 +1,8 @@
-import { RxExternalLink } from "react-icons/rx";
+import { useState } from "react";
 
 export default function ProjectCard(props) {
 
-    const { name, repoUrl, liveDemoUrl, img, technologies, gif } = props;
+    const { name, repoUrl, liveDemoUrl, img, technologies, gif, description } = props;
 
     return (
         <div className="project-card">
@@ -15,18 +15,19 @@ export default function ProjectCard(props) {
                 <h3 className="sec-header-2">{name}.</h3>
 
                 <span>Tech used: {technologies.join(", ")}</span>
+
+                <p>{ description }</p>
                 
                 <div className="card-links">
 
                     <a href={liveDemoUrl} target="_blank">
                         live demo
-                        <RxExternalLink />
                     </a>
 
                     <a href={repoUrl} target="_blank">
                         github repo
-                        <RxExternalLink />
                     </a>
+                    
 
                 </div>
 

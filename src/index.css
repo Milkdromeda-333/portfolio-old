@@ -101,45 +101,6 @@ a {
   margin: 1rem;
 }
 
-.tooltip{
-  position: relative;
-  display: inline-block;
-  border-bottom: 3px dotted var(--green);
-  cursor: default;
-}
-
-.tooltip .pronounciation {
-  visibility: hidden;
-  width: 120px;
-  background-color: var(--blue);
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
- 
-  position: absolute;
-  width: 50%;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -25%;
-  z-index: 999;
-}
-
-.tooltip:hover .pronounciation {
-  visibility: visible;
-}
-
-.tooltip .pronounciation::after {
- content: " ";
-  position: absolute;
-  top: 100%; /* At the bottom of the tooltip */
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: var(--blue) transparent transparent transparent;
-}
-
 /* ===== NAVBAR ===== */
 
 .navbar {
@@ -304,10 +265,10 @@ h1 {
   margin: 0 auto;
   padding-bottom: var(--page-margin);
   padding-top: 4rem;
-  width: 80%;
+  width: 90%;
+  font-size: 1.3rem;
 }
 
-.sec1,
 h3 {
   font-size: 2rem;
 }
@@ -320,13 +281,8 @@ h3 {
   z-index: 1;
 }
 
-.sec1 .pronounciation {
-  padding: 5px;
-  font-size: 1.2rem;
-}
-
 .sec1 p {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-top: 1rem;
 }
 
@@ -337,6 +293,7 @@ h3 {
   color: var(--sand);
   z-index: 1;
   padding: 3px;
+  margin-left: 5px;
 }
 
 .sec1 a::before {
@@ -357,14 +314,35 @@ h3 {
   background-color: var(--green);
 }
 
-/* ===== SKILLS ===== */
-.skills-sec {
-  padding-inline: 10%;
-  font-size: 1.5rem;
+.intro{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
 }
 
-.skills-sec span{
-  font-size: 20px;
+.intro-about-me{
+  text-align: left;
+  width: 50%;
+  text-shadow: 2px 2px 10px black;
+
+}
+
+.intro-about-me li{
+  list-style-type: "💻 ";
+  margin-bottom: 2px;
+}
+
+/* ===== SKILLS ===== */
+.skills-sec {
+  width: 50%;
+}
+
+.skills-sec span:not(.skill-card){
+  font-size: 1.3rem;
+  text-shadow: 2px 2px 10px black;
+
 }
 
 .skill-cards-container {
@@ -375,6 +353,7 @@ h3 {
   align-content: center;
   gap: 1rem;
   margin-bottom: 1rem;
+  margin-inline: auto;
 }
 
 .skill-card {
@@ -382,7 +361,6 @@ h3 {
   color: var(--blue);
   padding: 5px 15px;
   border-radius: var(--border-radius);
-  font-size: 1.3rem;
   box-shadow: 1px 1px 5px black;
 }
 
@@ -393,10 +371,10 @@ h3 {
   align-items: center;
 
   color: var(--sand);
-  font-size: 1.5rem;
   margin-inline: 16px;
   margin-bottom: var(--page-margin);
   text-align: center;
+  font-size: 1.3rem;
 }
 
 .portfolio-page h2 {
@@ -405,6 +383,11 @@ h3 {
   position: relative;
   z-index: 1;
   text-align: center;
+}
+
+.portfolio-page p{
+  text-shadow: 2px 2px 10px black;
+
 }
 
 /* ===== Project Card ===== */
@@ -418,8 +401,8 @@ h3 {
 }
 
 .project-card {
-  width: 80%;
-  height: 280px;
+  width: 90%;
+  height: 350px;
   overflow: hidden;
   
   background-image: url('src/assets/nnnoise.svg');
@@ -459,13 +442,9 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 1rem;
+  padding: 15px;
   font-size: 1.1rem;
   text-shadow: 1px 1px 8px black;
-}
-
-.card-info h3 {
-  margin: 1rem;
 }
 
 .card-links {
@@ -499,25 +478,6 @@ h3 {
   background-color: var(--sand);
 }
 
-.project-card button {
-  box-shadow: inset 0px 1px 0px 0px #cf866c;
-  background: linear-gradient(to bottom, var(--red) 5%, var(--red-tint) 100%);
-  background-color: #var(--red);
-  border-radius: 3px;
-  border: none;
-  display: inline-block;
-  cursor: pointer;
-  color: #ffffff;
-  font-size: 13px;
-  padding: 6px 24px;
-  text-decoration: none;
-  font-family: var(--regular-font);
-}
-
-.project-card button:hover {
-  background: linear-gradient(to bottom, var(--red-tint) 5%, var(--red) 100%);
-}
-
 .portfolio-page-github-link {
   position: relative;
   padding: 3px;
@@ -548,6 +508,8 @@ h3 {
   margin-bottom: -370px;
   padding-bottom: 3rem;
   scroll-margin-top: 1.5rem;
+  text-shadow: 2px 2px 5px black;
+
 }
 
 .contact-form-container {
@@ -726,6 +688,12 @@ footer span {
   .sec1 h2 {
     font-size: 2rem;
   }
+
+  
+  .skill-cards-container{
+    width: 100%;
+  }
+
   .project-card {
     height: unset;
     grid-template-columns: 1fr;
@@ -790,6 +758,20 @@ footer span {
   .project-card{
     width: 70%;
   }
+
+  .intro{
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro-about-me{
+  width: 100%;
+
+}
+
+.skills-sec {
+  width: 100%;
+}
 }
 
 @media (max-width: 600px) {
@@ -800,9 +782,9 @@ footer span {
     top: 0;
     z-index: 999;
 
-    -webkit-box-shadow: 0px 4px 22px 0px rgba(0, 0, 0, 0.43);
-    -moz-box-shadow: 0px 4px 22px 0px rgba(0, 0, 0, 0.43);
-    box-shadow: 0px 4px 22px 0px rgba(0, 0, 0, 0.43);
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
   }
 
   .logo {
@@ -903,14 +885,14 @@ footer span {
   }
 
   .card-links {
-    flex-direction: column;
     margin: 0;
+    padding: 0;
   }
 
   .project-card {
     padding-bottom: 10px;
     grid-template-rows: 0.5fr 1fr;
-    width: 80%;
+    width: 100%;
   }
 
   .portfolio-page p {
@@ -919,6 +901,10 @@ footer span {
 
   .portfolio-page-github-link::before {
     bottom: 2px;
+  }
+
+  .contact-form-container{
+    width: 90%;
   }
 
   .contact-page {
@@ -944,6 +930,10 @@ footer span {
 
   .contact-page label {
     font-size: 1rem;
+  }
+
+  .contact-form-container button{
+    width: 100%;
   }
 
   .footer {
@@ -1017,7 +1007,7 @@ footer span {
   }
 
   .contact-form-container {
-    width: 90%;
+    width: 100%;
   }
 
   .contact-form-container h2{

@@ -33,25 +33,12 @@
         ]
     },
     {
-        "name": "Youtube Chrome Extension",
-        "repoUrl": "https://github.com/Milkdromeda-333/youtube-ad-skipper-google-extension",
-        "liveDemoUrl": "https://chrome.google.com/webstore/detail/press-skip-ad-button/ghcbnbgnehhbpieolmcckflnhoinffgd",
-        "img": "yt-ad-skipper.png",
-        "gif": "yt-ad-skipper.gif",
-        "description": "I realized that I did not have to keep pressing skip myself because I engineer software one day, so I decided to jump into the world of creatibg chrome extensions using an outdated youtube tutorial and the google chrome extensions forums. I learned that day that I am really good at learning on the spot, and how important reading docs are.",
-        "technologies": [
-            "HTML",
-            "CSS",
-            "JavaScript"
-        ]
-    },
-    {
         "name": "Ugly Thingz",
         "repoUrl": "https://github.com/Milkdromeda-333/ugly-thingz",
         "liveDemoUrl": "https://milkdromeda-333.github.io/ugly-thingz/",
         "img": "ugly-thingz.png",
         "gif": "ugly-thingz.gif",
-        "description": "With this project I practiced styling with CSS, and using an API to read, create, delete, and update data. I also realized that people will delete all of your data if they are given the opportunity, so it's wise to prepare for that. I also successfully deployed a React project to github-pages, which has proven to be a notable feat.",
+        "description": "This is a project with the purpose of allowing users to post links to pictures that they deem ugly. I practiced consuming data from API's, as well as writing to, updating, and deleting API resources.",
         "technologies": [
             "React",
             "HTML",
