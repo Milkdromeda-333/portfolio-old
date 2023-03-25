@@ -5,14 +5,15 @@
         "liveDemoUrl": "https://makeup-market.surge.sh/",
         "img": "makeup-market-2.png",
         "gif": "makeup-market.gif",
-        "description": "This project was made to practice consuming data from an open RESTful API, problem solving, and web design. I used React to build the front-end, axios for the HTTP request, and TailwindCSS to style.",
+        "description": "Makeup Market was made to practice consuming data from an open RESTful API, problem solving, and web design. It features a cart for adding products and a functional checkout page with discount and mock purchase functionality.",
         "technologies": [
             "React",
             "TailwindCSS",
             "HTML",
             "Axios",
             "REST API"
-        ]
+        ],
+        "type": "frontend"
     },
     {
         "name": "Makelist",
@@ -20,7 +21,7 @@
         "liveDemoUrl": "TBA",
         "img": "makelist.png",
         "gif": "makelist.gif",
-        "description": "This website allows you to make checklists with items that can be set to be repeated without the hassle. It features beautiful and simple UI and UX, and an appealing dark and light mode.",
+        "description": "This website allows users to make checklists with items that can be set to be repeated without the hassle. It features beautiful and simple UI and UX, and an appealing dark and light mode.",
         "technologies": [
             "React",
             "Tailwind",
@@ -30,7 +31,8 @@
             "MongoDB",
             "Mongoose",
             "Axios"
-        ]
+        ],
+        "type": "full-stack"
     },
     {
         "name": "Ugly Thingz",
@@ -38,13 +40,14 @@
         "liveDemoUrl": "https://milkdromeda-333.github.io/ugly-thingz/",
         "img": "ugly-thingz.png",
         "gif": "ugly-thingz.gif",
-        "description": "This is a project with the purpose of allowing users to post links to pictures that they deem ugly. I practiced consuming data from API's, as well as writing to, updating, and deleting API resources.",
+        "description": "Ugly Things allows users to post links to pictures that they deem ugly. I practiced consuming data from API's, as well as writing to, updating, and deleting API resources.",
         "technologies": [
             "React",
             "HTML",
             "CSS",
             "Axios",
             "REST API"
-        ]
+        ],
+        "type": "frontend"
     }
 ]
