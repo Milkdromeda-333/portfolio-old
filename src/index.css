@@ -74,7 +74,6 @@ html {
 .body {
   background-image: url(/nnnoise.svg);
   background-position: center;
-  
 }
 
 .accent-words {
@@ -197,6 +196,8 @@ a {
   background-repeat: no-repeat;
   font-family: var(--decor-font);
   padding-bottom: var(--page-margin);
+  
+  overflow: hidden;
 
   box-shadow: 0px 6px 17px 7px rgba(53,76,60,1);
   -webkit-box-shadow: 0px 6px 17px 7px rgba(53,76,60,1);
@@ -213,6 +214,29 @@ a {
 .hero img {
   width: 400px;
   margin-left: 1rem;
+  animation: rollIn 1000ms 1;
+}
+
+@keyframes rollIn {
+  0% {
+    transform: translateX(500%);
+  }
+
+  25% {
+    transform: translateX(0) rotate(-20deg);
+  }
+
+  50% {
+     transform: translateX(10px) rotate(10deg);
+  }
+
+  75% {
+    transform: translateX(-10px) rotate(-5deg);
+  }
+
+  100% {
+     transform: translateX(0px) rotate(0deg);
+  }
 }
 
 h1 {
@@ -746,11 +770,14 @@ footer span {
 
 @media (max-width: 880px) {
   .hero img {
-    display: none;
+    width: 50%;
   }
 
   .hero {
+    margin-top: 0;
     text-align: center;
+    flex-direction: column-reverse;
+    justify-content: center;
   }
 
   .hero div {
@@ -871,8 +898,7 @@ footer span {
   }
 
   .hero{
-    margin-top: 4rem;
-    padding: 0;
+    padding: 0 1rem;
     padding-inline: 5px;
   }
 
