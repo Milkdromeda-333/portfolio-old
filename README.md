@@ -52,7 +52,7 @@ place-content: center;
 
 - I had a hard time with styling, specifically with styles over-riding others because of specificity. It was mostly caused by my use of html element selectord instead of class selectors.
 
-- If text is not centering, try text-align: center!
+- background noise is from https://fffuel.co/
 
 Known bugs:
 

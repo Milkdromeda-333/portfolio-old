@@ -10,7 +10,11 @@ export default function ProjectCard(props) {
         <div className="project-card">
 
             <div className="project-img-container">
-                <img src={`/project-images/${img}`} alt={name} onMouseOver={e => e.target.src = `/project-images/${gif}`} onMouseLeave={e => e.target.src = `/project-images/${img}`} />
+                <img src={`/project-images/${img}`}
+                    alt={name}
+                    onMouseOver={e => e.target.src = `/project-images/${gif}`}
+                    onMouseLeave={e => e.target.src = `/project-images/${img}`}
+                />
             </div>
 
             <div className="card-info">
@@ -19,8 +23,6 @@ export default function ProjectCard(props) {
                     <h3 className="sec-header-2">{name}.</h3>
                     <span>{ type } project.</span>
                 </div>
-
-                {/* <span>Tech used: {technologies.join(", ")}</span> */}
 
                 <div className="tech-used-container">{techUsed()}</div>
 

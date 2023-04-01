@@ -72,9 +72,9 @@ html {
 }
 
 .body {
-  background-image: url(./assets/nnnoise3.svg);
+  background-image: url(/nnnoise.svg);
   background-position: center;
-  background-size: cover;
+  
 }
 
 .accent-words {
@@ -98,7 +98,7 @@ a {
 
 .sec-header-2 {
   font-size: 26px;
-  margin: 1rem;
+  margin-bottom: 1rem;
 }
 
 /* ===== NAVBAR ===== */
@@ -186,13 +186,13 @@ a {
 /* ===== HOMEPAGE ===== */
 
 .hero {
-  background-image: url(./assets/nnnoise.svg);
+  background-image: url(/nnnoise.svg);
   background-attachment: fixed;
   background-color: var(--green);
   background-position: center;
   background-size: cover;
 
-  height: 85vh;
+  height: 100vh;
   padding-inline: 3.5rem;
   background-repeat: no-repeat;
   font-family: var(--decor-font);
@@ -321,6 +321,14 @@ h3 {
   align-items: start;
   gap: 1.5rem;
   width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 3px solid var(--blue);
+  background-color: rgba(107, 40, 55, 0.739);
+  background-image: url(/nnnoise.svg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 
 .intro-about-me{
@@ -341,7 +349,7 @@ h3 {
 }
 
 .skills-sec span:not(.skill-card){
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   text-shadow: 2px 2px 10px black;
 
 }
@@ -380,6 +388,7 @@ h3 {
 
 .portfolio-page h2 {
   margin-inline: 1rem;
+  margin-top: 0;
   color: var(--sand);
   position: relative;
   z-index: 1;
@@ -406,10 +415,11 @@ h3 {
   height: 380px;
   overflow: hidden;
   
-  background-image: url('src/assets/nnnoise.svg');
+  background-image: url('/nnnoise.svg');
   background-size: cover;
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
   box-shadow: 2px 2px 5px solid var(--red);
   border: 3px solid var(--red);
   border-radius: var(--border-radius);
@@ -460,8 +470,8 @@ h3 {
 }
 
 .project-type{
-  border: 2px solid;
-  border-radius: 10px;
+  background-color: var(--red);
+  border-radius: 7px;
   width: fit-content;
   padding: 0px 12px;
 }
@@ -510,26 +520,25 @@ h3 {
 
 .portfolio-page-github-link {
   position: relative;
-  padding: 3px;
+  z-index: 1;
+  padding-inline: 4px;
 }
 
 .portfolio-page-github-link::before {
-  content: "";
-  background-color: var(--blue);
   position: absolute;
+  content: "";
+  bottom: 0;
   left: 0;
-  bottom: 3px;
-  width: 100%;
-  height: 10px;
-  /* z index to put purple behind element */
   z-index: -1;
+  background-color: var(--blue);
+  height: 10px;
+  width: 100%;
   transition: all 100ms ease-in-out;
 }
 
 .portfolio-page-github-link:hover::before {
-  bottom: 0;
   height: 100%;
-  background-color: var(--green);
+  background-color: var(--red)
 }
 
 /* ===== CONTACT PAGE ===== */
@@ -550,7 +559,9 @@ h3 {
   border: 4px solid var(--red);
   border-radius: var(--border-radius);
   background-color: var(--blue);
-  background-image: url("./assets/nnnoise.svg");
+  background-image: url("/nnnoise.svg");
+  background-attachment: fixed;
+
   background-size: cover;
   padding-bottom: 1rem;
   width: 80%;
@@ -686,7 +697,8 @@ footer {
   align-items: center;
   gap: 0.8rem;
   text-align: center;
-  background-image: url(./assets/nnnoise.svg);
+  background-image: url(/nnnoise.svg);
+  background-attachment: fixed;
   font-size: 1.2rem;
   clear: both;
 }
@@ -729,8 +741,6 @@ footer span {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     padding-bottom: 1rem;
-
-    width: 50%;
   }
 }
 
@@ -760,7 +770,7 @@ footer span {
     font-size: 16px;
   }
 
-  .sec1 p {
+  .sec1 {
     font-size: 1rem;
   }
 
@@ -785,13 +795,19 @@ footer span {
     width: 70%;
   }
 
-  .intro{
+.intro{
   flex-direction: column;
   align-items: center;
+  gap: 0;
 }
 
 .intro-about-me{
   width: 100%;
+
+}
+
+.intro-about-me ul{
+  margin-block: 0;
 
 }
 
@@ -856,7 +872,8 @@ footer span {
 
   .hero{
     margin-top: 4rem;
-    height: 65vh;
+    padding: 0;
+    padding-inline: 5px;
   }
 
   .hero h1 {
@@ -899,7 +916,7 @@ footer span {
   }
 
   .skills-sec span{
-  font-size: 1rem;
+    font-size: 1rem;
   }
 
   .project-card button {
@@ -927,6 +944,17 @@ footer span {
 
   .portfolio-page-github-link::before {
     bottom: 2px;
+  }
+
+  .card-links{
+    flex-direction: column;
+    width: 100%;
+
+  }
+
+  .card-links a{
+    padding-inline: 10px;
+    width: 100%;
   }
 
   .contact-form-container{
@@ -1010,6 +1038,10 @@ footer span {
 
   .sec-header-2{
     font-size: var(--small-viewport-header);
+  }
+
+  .skill-card {
+    font-weight: 800;
   }
 
   .project-card{

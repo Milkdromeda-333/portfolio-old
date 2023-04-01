@@ -18,7 +18,7 @@
     {
         "name": "Makelist",
         "repoUrl": "https://github.com/Milkdromeda-333/Makelist",
-        "liveDemoUrl": "TBA",
+        "liveDemoUrl": "https://makelist.cyclic.app/",
         "img": "makelist.png",
         "gif": "makelist.gif",
         "description": "This website allows users to make checklists with items that can be set to be repeated without the hassle. It features beautiful and simple UI and UX, and an appealing dark and light mode.",

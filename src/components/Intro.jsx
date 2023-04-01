@@ -11,6 +11,7 @@ export default function Intro() {
             "Responsive design",
             "JWTs",
             "Git",
+            "SASS/SCSS",
             "Tailwind",
             "MongoDB",
             "Mongoose",
@@ -38,22 +39,25 @@ export default function Intro() {
                         <li>My name is pronounced "Anne-Juh-Neek Mack-EE"</li>
 
                         <li>
-                            I am a MERN stack web developer with a keen eye for details, and with the user experience in mind. I engineer both front-end and backend software. You can check out my codes
+                            I am a MERN stack web developer with a keen eye for details and a love for continuous learning and self-improvement.
+                             You can check out my codes
                             <a href="https://github.com/Milkdromeda-333" target="_blank">here</a>.
                         </li>
                         
                         <li>
-                            I enjoy learning, problem-solving/trouble-shooting, working with my hands, being productive, self-development, and being creative.
+                            My goal in software developing is to develop user-friendly software that will thoroughly satisfy user needs, and expectations.
                         </li>
 
                         <li>
-                            I am a Dallas, Texas native, and am currently stationed in Las Vegas with my husband and cat-child.
-
+                            My hobbies include: learning American Sign Language, coding, reading, eating good food, drawing, knitting, and surfing the web.
                         </li>
+                        
                         <li>
-                            I am a graduate from a Full-stack JavaScript course bootcamp called V-School.
-
+                            I am a Dallas, Texas native, and am currently stationed in Las Vegas with my husband and cat-baby.
                         </li>
+
+                        
+                        <li>I am a graduate from the Full-stack Web development course at a bootcamp named V-School.</li>
                     </ul>
                 </div>
                 

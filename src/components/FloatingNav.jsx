@@ -21,10 +21,10 @@ export default function FloatingNav() {
         <div className='floating-nav'>
 
             <nav className="menu" ref={menuRef}>
-                <a href="#" onClick={()=> setIsNavActive(false)}>Back to the top</a>
-                <a href="#about-me" onClick={()=> setIsNavActive(false)}>About me</a>
-                <a href="#portfolio-page" onClick={()=> setIsNavActive(false)}>Portfolio</a>
-                <a href="#contact-page" onClick={()=> setIsNavActive(false)}>Contact me</a>
+                <a href="#" onClick={toggleNav}>Back to the top</a>
+                <a href="#about-me" onClick={toggleNav}>About me</a>
+                <a href="#portfolio-page" onClick={toggleNav}>Portfolio</a>
+                <a href="#contact-page" onClick={toggleNav}>Contact me</a>
             </nav>
 
             {isNavActive ?
