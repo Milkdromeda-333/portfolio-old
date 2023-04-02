@@ -1,4 +1,3 @@
-import Img from "../assets/girl-coding.svg"
 
 export default function Hero() {
 
@@ -17,7 +16,7 @@ export default function Hero() {
 
             </div>
 
-            <img src={Img} alt="person working and drinking coffee" />
+            <img src="/girl-coding.svg" alt="person working and drinking coffee" />
             
             </header>
     );
