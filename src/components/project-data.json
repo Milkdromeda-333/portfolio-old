@@ -5,22 +5,23 @@
         "liveDemoUrl": "https://makeup-market.surge.sh/",
         "img": "makeup-market-2.png",
         "gif": "makeup-market.gif",
-        "description": "This project was made to practice consuming data from an open RESTful API, problem solving, and web design. I used React to build the front-end, axios for the HTTP request, and TailwindCSS to style.",
+        "description": "Makeup Market was made to practice consuming data from an open RESTful API, problem solving, and web design. It features a cart for adding products and a functional checkout page with discount and mock purchase functionality.",
         "technologies": [
             "React",
             "TailwindCSS",
             "HTML",
             "Axios",
             "REST API"
-        ]
+        ],
+        "type": "frontend"
     },
     {
         "name": "Makelist",
         "repoUrl": "https://github.com/Milkdromeda-333/Makelist",
-        "liveDemoUrl": "TBA",
+        "liveDemoUrl": "https://makelist.cyclic.app/",
         "img": "makelist.png",
         "gif": "makelist.gif",
-        "description": "This website allows you to make checklists with items that can be set to be repeated without the hassle. It features beautiful and simple UI and UX, and an appealing dark and light mode.",
+        "description": "This website allows users to make checklists with items that can be set to be repeated without the hassle. It features beautiful and simple UI and UX, and an appealing dark and light mode.",
         "technologies": [
             "React",
             "Tailwind",
@@ -30,20 +31,8 @@
             "MongoDB",
             "Mongoose",
             "Axios"
-        ]
-    },
-    {
-        "name": "Youtube Chrome Extension",
-        "repoUrl": "https://github.com/Milkdromeda-333/youtube-ad-skipper-google-extension",
-        "liveDemoUrl": "https://chrome.google.com/webstore/detail/press-skip-ad-button/ghcbnbgnehhbpieolmcckflnhoinffgd",
-        "img": "yt-ad-skipper.png",
-        "gif": "yt-ad-skipper.gif",
-        "description": "I realized that I did not have to keep pressing skip myself because I engineer software one day, so I decided to jump into the world of creatibg chrome extensions using an outdated youtube tutorial and the google chrome extensions forums. I learned that day that I am really good at learning on the spot, and how important reading docs are.",
-        "technologies": [
-            "HTML",
-            "CSS",
-            "JavaScript"
-        ]
+        ],
+        "type": "full-stack"
     },
     {
         "name": "Ugly Thingz",
@@ -51,13 +40,14 @@
         "liveDemoUrl": "https://milkdromeda-333.github.io/ugly-thingz/",
         "img": "ugly-thingz.png",
         "gif": "ugly-thingz.gif",
-        "description": "With this project I practiced styling with CSS, and using an API to read, create, delete, and update data. I also realized that people will delete all of your data if they are given the opportunity, so it's wise to prepare for that. I also successfully deployed a React project to github-pages, which has proven to be a notable feat.",
+        "description": "Ugly Things allows users to post links to pictures that they deem ugly. I practiced consuming data from API's, as well as writing to, updating, and deleting API resources.",
         "technologies": [
             "React",
             "HTML",
             "CSS",
             "Axios",
             "REST API"
-        ]
+        ],
+        "type": "frontend"
     }
 ]

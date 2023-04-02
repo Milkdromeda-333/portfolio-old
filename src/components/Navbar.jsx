@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom"
 import { useState } from "react";
-import Logo from "../assets/logo2.gif"
 import { RxCross1, RxHamburgerMenu } from "react-icons/rx"
 
 export default function Navbar() {
@@ -13,7 +12,7 @@ export default function Navbar() {
         <nav className="navbar">
             
             <Link to="/" >
-                <img src={Logo} alt="logo" className="logo" />
+                <img src="/logo.gif" alt="logo" className="logo" />
             </Link>
 
             {
