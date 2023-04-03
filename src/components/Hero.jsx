@@ -16,7 +16,7 @@ export default function Hero() {
 
             </div>
 
-            <img src="/girl-coding.svg" alt="person working and drinking coffee" />
+            <img src="./girl-coding.svg" alt="person working and drinking coffee" />
             
             </header>
     );

@@ -12,7 +12,7 @@ export default function Navbar() {
         <nav className="navbar">
             
             <Link to="/" >
-                <img src="/logo.gif" alt="logo" className="logo" />
+                <img src="./logo.gif" alt="logo" className="logo" />
             </Link>
 
             {

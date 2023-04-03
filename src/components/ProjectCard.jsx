@@ -10,10 +10,10 @@ export default function ProjectCard(props) {
         <div className="project-card">
 
             <div className="project-img-container">
-                <img src={`/project-images/${img}`}
+                <img src={`./project-images/${img}`}
                     alt={name}
-                    onMouseOver={e => e.target.src = `/project-images/${gif}`}
-                    onMouseLeave={e => e.target.src = `/project-images/${img}`}
+                    onMouseOver={e => e.target.src = `./project-images/${gif}`}
+                    onMouseLeave={e => e.target.src = `./project-images/${img}`}
                 />
             </div>
 
