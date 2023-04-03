@@ -1,4 +1,3 @@
-import { Routes, Route } from 'react-router-dom';
 import Intro from "./components/Intro"
 import PortfolioPage from "./pages/PortfolioPage"
 import ContactPage from "./pages/ContactPage"
@@ -8,8 +7,6 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 
 function App() {
-  window.location.hash = window.location.hash
-  // console.log(window.location)
   return (
     <div className="App">
       <Navbar />
